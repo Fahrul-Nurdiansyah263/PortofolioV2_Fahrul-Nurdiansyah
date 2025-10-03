@@ -9,6 +9,7 @@ import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoFirebase } from "react-icons/io5";
 import { AiOutlineOpenAI } from "react-icons/ai";
+import { SiFilament } from "react-icons/si";
 
 export default function Projects() {
     return (
@@ -95,6 +96,7 @@ export default function Projects() {
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliLearning-Laravel_Version"
                     icon={<>
                         <FaLaravel className="text-red-500" />
+                        <SiFilament className="text-[#e92c2c]" />
                         <SiTailwindcss className="text-cyan-500" />
                         <SiMysql className="text-sky-700" />
                         <img
