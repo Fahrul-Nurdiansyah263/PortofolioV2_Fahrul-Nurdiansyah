@@ -69,7 +69,6 @@ const MarqueeItem = ({ type, item }) => {
       </div>
     );
   }
-
   return null;
 };
 

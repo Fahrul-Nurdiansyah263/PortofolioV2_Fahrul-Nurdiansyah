@@ -29,7 +29,7 @@ export default function LoadingScreen({ duration }) {
   return (
     <div className="fixed inset-0 bg-slate-900 flex flex-col justify-center items-center z-50 text-white">
       <DotLottieReact
-        src="lottie/Cute Monster.lottie"
+        src="lottie/Cute Monster.json"
         loop={true}
         autoplay
         className='w-64 h-64'
