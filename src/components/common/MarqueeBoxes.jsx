@@ -46,7 +46,7 @@ const MarqueeItem = ({ type, item }) => {
     const { Icon, name, color } = item;
     return (
       <div
-        className="w-24 h-16 sm:w-40 sm:h-24 bg-[#1f1f1f] text-white
+        className="w-24 h-16 sm:w-40 sm:h-24 bg-gray-200 text-gray-800 dark:bg-[#1f1f1f] dark:text-white font-semibold
                    p-2 sm:p-3 mx-1 sm:mx-2 rounded-md shadow-lg
                    flex flex-col items-center justify-center
                    text-xs sm:text-sm"

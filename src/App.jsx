@@ -6,6 +6,9 @@ import Projects from './sections/Projects'
 import Achievement from './sections/Achievement'
 import Footer from './sections/Footer'
 import LoadingScreen from './sections/LoadingScreen'
+import { TimelineDemo } from './sections/TimeLine'
+import FloatingControls from './components/common/FloatingControls'
+
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -32,15 +35,26 @@ export default function App() {
     return <LoadingScreen duration={LOADING_DURATION} />
   }
   return (
-     <div className="relative bg-black min-h-screen">
+     <div className="relative dark:bg-black min-h-screen">
+
       <nav className="sticky top-5 inset-x-0 z-50">
         <NavbarContainer />
       </nav>
-      <Home />
-      <About />
-      <Projects />
-      <Achievement/>
-      <Footer />
+
+      <main>
+        <section id="home"><Home /></section>
+        <section id="about"><About /></section>
+        <section id="projects"><Projects /></section>
+        <section id="timeline"><TimelineDemo /></section>
+        <section id="achievement"><Achievement /></section>
+      </main>
+      
+      <footer>
+        <Footer />
+      </footer>
+      
+
+      <FloatingControls />
     </div>
   )
 }

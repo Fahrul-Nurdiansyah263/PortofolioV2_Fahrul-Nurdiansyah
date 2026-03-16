@@ -9,31 +9,26 @@ import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoFirebase } from "react-icons/io5";
 import { AiOutlineOpenAI } from "react-icons/ai";
+import { SiFilament } from "react-icons/si";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Projects() {
+    const { translation } = useLanguage();
     return (
         <section id="projects" className="flex flex-col mx-auto font-inter">
             <div className="flex justify-center items-center font-bold py-6 mt-12">
-                <h1 className="text-white text-4xl">Projects</h1>
+                <h1 className="dark:text-white text-4xl">{translation("projects.title")}</h1>
             </div>
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5">
-
                 <ThreeDCard
-                    judul="RuliLearning"
-                    deskripsi="RuliLearning adalah aplikasi LMS berbasis web dengan React dan Supabase. Serta menggunakan Augmented Reality untuk menampilkan 3d secara nyata"
+                    title={translation("projects.items.ruliLearningReact.title")}
+                    description={translation("projects.items.ruliLearningReact.description")}
                     img="/Projects/RuliLearning_React.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliLearning_React?tab=readme-ov-file"
                     icon={<>
                         <FaReact className="text-sky-400 " />
                         <SiTailwindcss className="text-cyan-500" />
                         <RiSupabaseFill className="text-green-500" />
-                        <img
-                            src="https://dashboard.mywebar.com/_nuxt/img/fed54bf.svg"
-                            alt="Midtrans"
-                            loading="lazy"
-                            className="w-6 h-6 object-contain"
-                            style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
-                        />
                         <SiGooglefonts className="text-yellow-600" />
                         <RiGeminiFill className="text-blue-500" />
                         <AiOutlineOpenAI className="text-teal-500" />
@@ -41,8 +36,8 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="tanyaArul"
-                    deskripsi="Asisten tanya jawab berbasis web dengan React + Gemini AI."
+                    title={translation("projects.items.tanyaArul.title")}
+                    description={translation("projects.items.tanyaArul.description")}
                     img="/Projects/tanyaArul.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/tanyaArulV2"
                     icon={<>
@@ -55,8 +50,8 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="FahrulMovies21"
-                    deskripsi="Aplikasi web sederhana untuk menampilkan informasi film dengan Bootstrap."
+                    title={translation("projects.items.movies.title")}
+                    description={translation("projects.items.movies.description")}
                     img="/Projects/FahrulMovies21.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/FahrulMovies21"
                     icon={<>
@@ -66,8 +61,8 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="Ruli - Voice Assistants"
-                    deskripsi="Ruli: Asisten virtual Python untuk perintah suara, pencarian Wikipedia, membuka situs, dan memutar lagu."
+                    title={translation("projects.items.voiceAssistant.title")}
+                    description={translation("projects.items.voiceAssistant.description")}
                     img="/Projects/ruli-virtual.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/ruli-ai"
                     icon={<>
@@ -76,8 +71,8 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="Web Perpustakaan"
-                    deskripsi="Aplikasi web sederhana yang dirancang untuk memfasilitasi pengelolaan data buku dan peminjaman di perpustakaan. "
+                    title={translation("projects.items.library.title")}
+                    description={translation("projects.items.library.description")}
                     img="/Projects/web-perpustakaan.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/web-perpustakaan"
                     icon={<>
@@ -89,23 +84,17 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="RuliLearning"
-                    deskripsi="RuliLearning: LMS web berbasis Laravel untuk materi gratis dan premium, menggunakan Midtrans untuk pembayaran dan mengirim email konfirmasi setelah pembayaran berhasil."
+                    title={translation("projects.items.ruliLearningLaravel.title")}
+                    description={translation("projects.items.ruliLearningLaravel.description")}
                     img="/Projects/RuliLearning_React.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliLearning-Laravel_Version"
                     icon={<>
                         <FaLaravel className="text-red-500" />
+                        <SiFilament className="text-[#e92c2c]" />
                         <SiTailwindcss className="text-cyan-500" />
                         <SiMysql className="text-sky-700" />
                         <img
-                            src="https://midtrans.com/assets/img/logo.svg"
-                            alt="Midtrans"
-                            loading="lazy"
-                            className="w-6 h-6 object-contain"
-                            style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
-                        />
-                        <img
-                            src=" https://dashboard.mywebar.com/_nuxt/img/fed54bf.svg"
+                            src="https://seeklogo.com/images/M/midtrans-logo-2C8B2F7E0F-seeklogo.com.png"
                             alt="Midtrans"
                             loading="lazy"
                             className="w-6 h-6 object-contain"
@@ -118,8 +107,8 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="RuliKlinik"
-                    deskripsi="RuliKlinik adalah aplikasi web Laravel untuk manajemen klinik, dengan fitur pendaftaran pasien via email, pengelolaan data oleh admin, serta soft deletes "
+                    title={translation("projects.items.ruliKlinik.title")}
+                    description={translation("projects.items.ruliKlinik.description")}
                     img="/Projects/RuliKlinik.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliKlink-Laravel/tree/main"
                     icon={<>
@@ -127,7 +116,7 @@ export default function Projects() {
                         <FaBootstrap className="text-purple-600" />
                         <img
                             src="https://mailtrap.io/wp-content/uploads/2025/04/mailtrap-new-light-1.svg"
-                            alt="Midtrans"
+                            alt="Mailtrap"
                             loading="lazy"
                             className="w-6 h-6 object-contain"
                             style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
@@ -140,9 +129,9 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    judul="Catatan"
+                    title={translation("projects.items.catatan.title")}
                     img=""
-                    deskripsi="Aplikasi catatan berbasis Flutter yang menggunakan Firebase untuk penyimpanan data dan Google Generative AI untuk fitur obrolan cerdas. "
+                    description={translation("projects.items.catatan.description")}
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/catatan_flutter-firebase"
                     icon={<>
                         <FaFlutter className="text-sky-500" />

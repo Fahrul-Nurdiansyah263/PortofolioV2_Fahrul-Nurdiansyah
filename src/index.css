@@ -8,7 +8,10 @@
     --font-inter : "Inter", sans-serif;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .canvas-wrapper {
   transform: none !important;
   overflow: visible !important;
 }
+

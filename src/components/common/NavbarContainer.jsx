@@ -10,19 +10,22 @@ import {
   MobileNavMenu,
 } from "../ui/resizable-navbar";
 import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
+
 
 export default function NavbarContainer() {
+  const { translation } = useLanguage();
   const navItems = [
     {
-      name: "Home",
+      name: translation("nav.home"),
       link: "#home",
     },
     {
-      name: "About",
+      name: translation("nav.about"),
       link: "#about",
     },
     {
-      name: "Projects",
+      name: translation("nav.projects"),
       link: "#projects",
     },
   ];
@@ -37,7 +40,7 @@ export default function NavbarContainer() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <NavbarButton variant="secondary" href="#footer">Hire Me</NavbarButton>
-            <NavbarButton variant="primary" href="https://drive.google.com/file/d/11MAzCiYH1ccUEH_pYvOS1Vr7mhEYg95V/view?usp=sharing">CV</NavbarButton>
+            <NavbarButton variant="primary" href="https://drive.google.com/file/d/1SkhUbFgiIuGZ892WodqnYzJCZT-I5TRp/view?usp=sharing">CV</NavbarButton>
           </div>
         </NavBody>
         <MobileNav>
@@ -58,7 +61,7 @@ export default function NavbarContainer() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative  text-black! dark:text-white!"
               >
                 <span className="block">{item.name}</span>
               </a>
@@ -76,7 +79,7 @@ export default function NavbarContainer() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
-                href="https://drive.google.com/file/d/11MAzCiYH1ccUEH_pYvOS1Vr7mhEYg95V/view?usp=sharing"
+                href="https://drive.google.com/file/d/1SkhUbFgiIuGZ892WodqnYzJCZT-I5TRp/view?usp=sharing"
               >
                 CV
               </NavbarButton>

@@ -3,13 +3,13 @@ import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer id="footer" className="bg-black">
+        <footer id="footer" className="dark:bg-black max-w-7xl mx-auto">
             <div className="container mx-auto px-6 py-8">
                 <div className="border-t border-gray-800" />
 
                 <div className="flex flex-col items-center justify-between pt-8 sm:flex-row">
 
-                    <p className="text-sm text-gray-500 text-center sm:text-left mb-4 sm:mb-0">
+                    <p className="text-sm text-neutral-800 dark:text-gray-500 text-center sm:text-left mb-4 sm:mb-0">
                         © {new Date().getFullYear()} Fahrul Nurdiansyah. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6 text-2xl">

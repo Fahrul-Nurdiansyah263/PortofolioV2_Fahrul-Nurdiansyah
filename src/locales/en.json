@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "hireme": "Hire Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description1": "Hi! I am Fahrul Nurdiansyah, a web developer passionate about transforming complex ideas into elegant and functional web applications. My digital journey began when I started college in 2022, and since then, I have never stopped learning and exploring new technologies.",
+    "description2": "I truly enjoy the problem-solving process and collaborating within a team to create solutions that have a positive impact. For me, coding is not just about writing lines of code, but about building bridges between people and technology.",
+    "description3": "Beyond coding, I believe in the importance of good communication, time management, and continuous learning. With a combination of technical skills and soft skills, I strive to deliver solutions that not only work but also provide the best experience for users."
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "ruliLearningReact": {
+        "title": "RuliLearning",
+        "description": "A web-based LMS application built with React and Supabase. It uses Augmented Reality to display 3D objects in real-world environments."
+      },
+      "tanyaArul": {
+        "title": "tanyaArul",
+        "description": "A web-based question and answer assistant built with React and Gemini AI."
+      },
+      "movies": {
+        "title": "FahrulMovies21",
+        "description": "A simple web application to display movie information built with Bootstrap."
+      },
+      "voiceAssistant": {
+        "title": "Ruli - Voice Assistants",
+        "description": "Ruli: A Python virtual assistant for voice commands, Wikipedia search, opening websites, and playing music."
+      },
+      "library": {
+        "title": "Library Web",
+        "description": "A simple web application designed to facilitate the management of book data and borrowing activities in a library."
+      },
+      "ruliLearningLaravel": {
+        "title": "RuliLearning",
+        "description": "A Laravel-based LMS web application for free and premium learning materials, using Midtrans for payments and sending confirmation emails."
+      },
+      "ruliKlinik": {
+        "title": "RuliKlinik",
+        "description": "RuliKlinik is a Laravel web application for clinic management, featuring patient registration via email, admin data management, and soft deletes."
+      },
+      "catatan": {
+        "title": "Catatan",
+        "description": "A Flutter-based note-taking application that uses Firebase for data storage and Google Generative AI for an intelligent chat feature."
+      }
+    }
+  },
+  "timeline": {
+    "title": "Digital Evolution Trace",
+    "subtitle": "Looking back at my learning process and growth in every line of code.",
+    "early2025": "Early 2025",
+    "year2025": "2025",
+    "internshipLabel": "Internship",
+    "tanyaArul": {
+      "description": "A web-based question and answer assistant built with React and Gemini AI."
+    },
+    "ruliLearning": {
+      "description": "RuliLearning: A Laravel-based LMS web application for free and premium learning materials, using Midtrans for payments and sending confirmation emails."
+    },
+    "internship": {
+      "role": "Front End Developer",
+      "company": "PT Imajiku Cipta Media",
+      "period": "Oct 13, 2025 - Feb 13, 2026"
+    },
+    "experience": {
+      "convertedFigma": "✅ Converted Figma designs into responsive web pages.",
+      "implementedTheme": "✅ Implemented theme layouts for MiWeb platform.",
+      "improvedUI": "✅ Improved UI styling and responsive layout across devices.",
+      "fixedFrontend": "✅ Fixed front-end functionality and layout issues."
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "view": "Click to view certificate",
+    "certificate": {
+      "imphnen": "Aspiring to be a Skilled Programmer but Reluctant to Code",
+      "basicWeb": "Learning the Basics of Web Programming",
+      "basicWebFrontEnd": "Learning to Create Web Front-End for Beginners",
+      "financialLiteracy": "Financial Literacy 101",
+      "DevCoach181": "DevCoach 181: Back-End | Securing RESTful API Server Techniques",
+      "DevCoach192": "DevCoach 192: Soft Skill | Prioritize Smarter: Master Your Time!",
+      "DevCoach198": "DevCoach 198 | Machine Learning in Flutter",
+      "DevCoach200": "DevCoach #200: IT & AI Integration powered by Asah!"
+    }
+  }
+}

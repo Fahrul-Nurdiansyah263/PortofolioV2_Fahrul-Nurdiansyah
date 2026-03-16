@@ -1,6 +1,7 @@
 // Component ported from https://codepen.io/JuanFuentes/full/rgXKGQ
 
 import { useEffect, useRef, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 const TextPressure = ({
   text = 'Compressa',
@@ -17,7 +18,8 @@ const TextPressure = ({
   stroke = false,
   scale = false,
 
-  textColor = '#FFFFFF',
+  textColor,
+
   strokeColor = '#FF0000',
   strokeWidth = 2,
   className = '',
@@ -34,6 +36,10 @@ const TextPressure = ({
   const [fontSize, setFontSize] = useState(minFontSize);
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
+
+  const { dark } = useTheme();
+
+  const finalText = textColor || (dark ? "#ffffff" : "#000000"); 
 
   const chars = text.split('');
 
@@ -155,7 +161,7 @@ const TextPressure = ({
         }
         .stroke span {
           position: relative;
-          color: ${textColor};
+          color: ${finalText};
         }
         .stroke span::after {
           content: attr(data-char);
@@ -182,7 +188,7 @@ const TextPressure = ({
           transformOrigin: 'center top',
           margin: 0,
           fontWeight: 100,
-          color: stroke ? undefined : textColor
+          color: stroke ? undefined : finalText
         }}
       >
         {chars.map((char, i) => (

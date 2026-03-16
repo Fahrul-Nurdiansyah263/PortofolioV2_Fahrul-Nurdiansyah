@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Saya",
+    "projects": "Proyek",
+    "hireme": "Rekrut Saya"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description1": "Halo! Saya Fahrul Nurdiansyah seorang pengembang web yang bersemangat dalam mengubah ide-ide kompleks menjadi aplikasi web yang elegan dan fungsional. Perjalanan saya di dunia digital dimulai sejak saya memasuki kuliah yaitu pada tahun 2022, dan sejak saat itu, saya tidak pernah berhenti belajar dan mengeksplorasi teknologi baru.",
+    "description2": "Saya sangat menikmati proses memecahkan masalah dan berkolaborasi dalam tim untuk menciptakan solusi yang berdampak positif. Bagi saya, coding bukan hanya tentang menulis baris kode, tapi tentang membangun jembatan antara manusia dan teknologi.",
+    "description3": "Di luar coding, saya percaya pentingnya komunikasi yang baik, manajemen waktu, dan pembelajaran berkelanjutan. Dengan kombinasi keterampilan teknis dan soft skill ini, saya berusaha menghadirkan solusi yang tidak hanya berfungsi, tetapi juga memberikan pengalaman terbaik bagi pengguna."
+  },
+  "projects": {
+    "title": "Proyek",
+    "items": {
+      "ruliLearningReact": {
+        "title": "RuliLearning",
+        "description": "Aplikasi LMS berbasis web yang dibangun dengan React dan Supabase. Menggunakan Augmented Reality (AR) untuk menampilkan objek 3D di lingkungan dunia nyata."
+      },
+      "tanyaArul": {
+        "title": "tanyaArul",
+        "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
+      },
+      "movies": {
+        "title": "FahrulMovies21",
+        "description": "Aplikasi web sederhana untuk menampilkan informasi film yang dibangun dengan Bootstrap."
+      },
+      "voiceAssistant": {
+        "title": "Ruli - Asisten Suara",
+        "description": "Ruli: Asisten virtual Python untuk perintah suara, pencarian Wikipedia, membuka situs web, dan memutar musik."
+      },
+      "library": {
+        "title": "Web Perpustakaan",
+        "description": "Aplikasi web sederhana yang dirancang untuk memudahkan pengelolaan data buku dan aktivitas peminjaman di perpustakaan."
+      },
+      "ruliLearningLaravel": {
+        "title": "RuliLearning",
+        "description": "Aplikasi LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, menggunakan Midtrans untuk pembayaran dan pengiriman email konfirmasi otomatis."
+      },
+      "ruliKlinik": {
+        "title": "RuliKlinik",
+        "description": "Aplikasi web Laravel untuk manajemen klinik, fitur pendaftaran pasien melalui email, manajemen data admin, dan fitur hapus sementara (soft deletes)."
+      },
+      "catatan": {
+        "title": "Catatan",
+        "description": "Aplikasi pencatat berbasis Flutter yang menggunakan Firebase untuk penyimpanan data dan Google Generative AI untuk fitur chat cerdas."
+      }
+    }
+  },
+  "timeline": {
+    "title": "Jejak Evolusi Digital",
+    "subtitle": "Melihat kembali proses belajar dan pertumbuhan saya di setiap baris kode.",
+    "early2025": "Awal 2025",
+    "year2025": "2025",
+    "internshipLabel": "Magang",
+    "tanyaArul": {
+      "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
+    },
+    "ruliLearning": {
+      "description": "RuliLearning: Aplikasi LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, menggunakan Midtrans untuk pembayaran dan pengiriman email konfirmasi otomatis."
+    },
+    "internship": {
+      "role": "Front End Developer",
+      "company": "PT Imajiku Cipta Media",
+      "period": "13 Okt 2025 - 13 Feb 2026"
+    },
+    "experience": {
+      "convertedFigma": "✅ Mengonversi desain Figma menjadi halaman web responsif.",
+      "implementedTheme": "✅ Mengimplementasikan layout tema untuk platform MiWeb.",
+      "improvedUI": "✅ Meningkatkan styling UI dan layout responsif di berbagai perangkat.",
+      "fixedFrontend": "✅ Memperbaiki fungsionalitas front-end dan masalah layout."
+    }
+  },
+  "achievements": {
+    "title": "Pencapaian",
+    "view": "Klik untuk lihat sertifikat",
+    "imphnen": "Ingin Menjadi Programmer Handal Namun Enggan Ngoding",
+    "basicWeb": "Belajar Dasar Pemrograman Web",
+    "basicWebFrontEnd": "Belajar Membuat Front End Web Untuk Pemula",
+    "financialLiteracy": "Financial Literacy 101",
+    "DevCoach181": "DevCoach 181: Back-End | Teknik Mengamankan Server RESTful API",
+    "DevCoach192": "DevCoach 192: Soft Skill | Atur Prioritas dengan Lebih Cerdas!",
+    "DevCoach198": "DevCoach 198 | Machine Learning dalam Flutter",
+    "DevCoach200": "DevCoach #200: Integrasi IT & AI powered by Asah!"
+  }
+}
