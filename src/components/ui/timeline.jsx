@@ -40,7 +40,7 @@ export const Timeline = ({
           {translation("timeline.subtitle")}
         </p>
       </div>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto md:pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:gap-10">
             <div

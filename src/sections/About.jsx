@@ -9,10 +9,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="dark:bg-black dark:text-white bg-white text-black w-full py-16 max-w-7xl mx-auto flex flex-col items-center justify-center gap-16 font-inter">
+      className="dark:bg-black dark:text-white bg-white text-black w-full md:py-16 max-w-7xl mx-auto flex flex-col items-center justify-center gap-16 font-inter">
       <div className="w-full flex flex-col lg:flex-row items-center">
         <div className="flex flex-col">
-          <h1 className="text-4xl xl:pl-10 pl-20 md:text-5xl font-bold md:col-start-1 md:row-start-1 xl:-mt-20  ">
+          <h1 className="text-4xl xl:pl-10 mb-5 md:mb-0 md:text-5xl font-bold md:col-start-1 md:row-start-1 xl:-mt-20  ">
             {translation("about.title")}
           </h1>
           <div className="flex-col hidden lg:flex xl:w-xl mt-10 gap-5 xl:pl-10 pl-20">
@@ -56,7 +56,7 @@ export default function About() {
           <Lanyard position={[0, 0, 15]} gravity={[0, -80, 0]} />
         </div>
 
-        <div className="flex flex-col lg:hidden max-w-7xl gap-5 px-4 md:px-8 lg:mt-[-40px] md:col-start-1 md:row-start-2">
+        <div className="flex flex-col lg:hidden max-w-7xl gap-5  px-4 md:px-8 -mt-4">
           <div className=" mx-auto  sm:text-left">
             <DecryptedText
               text={translation("about.description1")}

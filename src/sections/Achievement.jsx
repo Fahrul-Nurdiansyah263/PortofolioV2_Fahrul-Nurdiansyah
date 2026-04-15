@@ -21,7 +21,7 @@ export default function Achievement() {
   return (
     <section
       id="achievement"
-      className="relative flex flex-col  font-inter max-w-7xl mx-auto py-20 px-6 lg:px-20 mt-20"
+      className="relative flex flex-col  font-inter max-w-7xl mx-auto md:py-20 px-6 lg:px-20 mt-20"
     >
       <div className="ml-14 font-bold py-6">
         <h1 className="text-black dark:text-white text-4xl">{translation("achievements.title")}</h1>
@@ -39,6 +39,17 @@ export default function Achievement() {
           </DirectionAwareHover>
         </div>
 
+        <div data-aos="fade-up" data-aos-delay="100">
+          <DirectionAwareHover
+            imageUrl="/Certificate/magang.png"
+            className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
+          >
+            <p className="font-bold text-sm sm:text-lg">
+              {translation("achievements.certificate.magang")}
+            </p>
+          </DirectionAwareHover>
+        </div>
+
         <div data-aos="fade-up" data-aos-delay="200">
           <a
             href="https://www.dicoding.com/dicodingassets/coursecertificate/d74e4eadeb593da0f16d1e6292489f6ff02827e2/view"
@@ -51,10 +62,10 @@ export default function Achievement() {
               className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
             >
               <p className="font-bold text-sm sm:text-lg">
-                Belajar Dasar Pemrograman Web
+                {translation("achievements.certificate.basicWebFrontEnd")}
               </p>
               <p className="text-sm text-gray-300">
-                Klik untuk lihat sertifikat
+                {translation("achievements.view")}
               </p>
             </DirectionAwareHover>
           </a>
@@ -72,10 +83,31 @@ export default function Achievement() {
               className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
             >
               <p className="font-bold text-sm sm:text-lg">
-                Belajar Dasar Pemrograman Web
+                {translation("achievements.certificate.basicWebFrontEnd")}
               </p>
               <p className="text-sm text-gray-300">
-                Klik untuk lihat sertifikat
+                {translation("achievements.view")}
+              </p>
+            </DirectionAwareHover>
+          </a>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="400">
+          <a
+            href="https://www.dicoding.com/dicodingassets/coursecertificate/06ee75306429644a3943618b4db8069e952e3120/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <DirectionAwareHover
+              imageUrl="/Certificate/javascript.png"
+              className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
+            >
+              <p className="font-bold text-sm sm:text-lg">
+                {translation("achievements.certificate.basicJavaScript")}
+              </p>
+              <p className="text-sm text-gray-300">
+                {translation("achievements.view")}
               </p>
             </DirectionAwareHover>
           </a>
@@ -96,57 +128,14 @@ export default function Achievement() {
                 Financial Literacy 101
               </p>
               <p className="text-sm text-gray-300">
-                Klik untuk lihat sertifikat
+                {translation("achievements.view")}
               </p>
             </DirectionAwareHover>
           </a>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="600">
-          <DirectionAwareHover
-            imageUrl="/Certificate/DevCoach181.png"
-            className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
-          >
-            <p className="font-bold text-sm sm:text-lg">
-              DevCoach 181: Back-End | Teknik Mengamankan Server RESTful API
-            </p>
-          </DirectionAwareHover>
-        </div>
 
-        <div data-aos="fade-up" data-aos-delay="800">
-          <DirectionAwareHover
-            imageUrl="/Certificate/DevCoach192.png"
-            className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
-          >
-            <p className="font-bold text-sm sm:text-lg">
-              DevCoach 192: Soft Skill | Penangkal Nirwaktu: Atur Prioritas
-              dengan Lebih Cerdas!
-            </p>
-          </DirectionAwareHover>
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="1000">
-          <DirectionAwareHover
-            imageUrl="/Certificate/DevCoach198.png"
-            className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
-          >
-            <p className="font-bold text-sm sm:text-lg">
-              DevCoach 198 | Machine Learning dalam Flutter: Bikin Aplikasi Kamu
-              Makin Canggih dengan AI!
-            </p>
-          </DirectionAwareHover>
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="1200">
-          <DirectionAwareHover
-            imageUrl="/Certificate/DevCoach200.png"
-            className="w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
-          >
-            <p className="font-bold text-sm sm:text-lg">
-              DevCoach #200: Integrasi IT &amp; AI powered by Asah!
-            </p>
-          </DirectionAwareHover>
-        </div>
+        
 
       </div>
     </section>

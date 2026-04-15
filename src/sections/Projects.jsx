@@ -9,7 +9,7 @@ import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
 import { FaFlutter } from "react-icons/fa6";
 import { IoLogoFirebase } from "react-icons/io5";
 import { AiOutlineOpenAI } from "react-icons/ai";
-import { SiFilament } from "react-icons/si";
+import { SiFilament, SiNextdotjs } from "react-icons/si";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Projects() {
@@ -21,12 +21,12 @@ export default function Projects() {
             </div>
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5">
                 <ThreeDCard
-                    title={translation("projects.items.ruliLearningReact.title")}
-                    description={translation("projects.items.ruliLearningReact.description")}
-                    img="/Projects/RuliLearning_React.png"
-                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliLearning_React?tab=readme-ov-file"
+                    title={translation("projects.items.ruliConnect.title")}
+                    description={translation("projects.items.ruliConnect.description")}
+                    img="/Projects/ruliconnect.png"
+                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliConnect"
                     icon={<>
-                        <FaReact className="text-sky-400 " />
+                        <SiNextdotjs className="text-black " />
                         <SiTailwindcss className="text-cyan-500" />
                         <RiSupabaseFill className="text-green-500" />
                         <SiGooglefonts className="text-yellow-600" />

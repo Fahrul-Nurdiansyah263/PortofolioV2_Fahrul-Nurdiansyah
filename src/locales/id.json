@@ -14,10 +14,6 @@
   "projects": {
     "title": "Proyek",
     "items": {
-      "ruliLearningReact": {
-        "title": "RuliLearning",
-        "description": "Aplikasi LMS berbasis web yang dibangun dengan React dan Supabase. Menggunakan Augmented Reality (AR) untuk menampilkan objek 3D di lingkungan dunia nyata."
-      },
       "tanyaArul": {
         "title": "tanyaArul",
         "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
@@ -45,6 +41,10 @@
       "catatan": {
         "title": "Catatan",
         "description": "Aplikasi pencatat berbasis Flutter yang menggunakan Firebase untuk penyimpanan data dan Google Generative AI untuk fitur chat cerdas."
+      },
+      "ruliConnect": {
+        "title": "RuliConnect",
+        "description": "Platform sosial untuk personal branding, berbagi konten, dan interaksi waktu nyata dengan UI modern."
       }
     }
   },
@@ -59,6 +59,9 @@
     },
     "ruliLearning": {
       "description": "RuliLearning: Aplikasi LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, menggunakan Midtrans untuk pembayaran dan pengiriman email konfirmasi otomatis."
+    },
+    "ruliConnect": {
+      "description": "RuliConnect: Platform sosial untuk personal branding, berbagi konten, dan interaksi waktu nyata dengan UI modern."
     },
     "internship": {
       "role": "Front End Developer",
@@ -75,13 +78,13 @@
   "achievements": {
     "title": "Pencapaian",
     "view": "Klik untuk lihat sertifikat",
-    "imphnen": "Ingin Menjadi Programmer Handal Namun Enggan Ngoding",
-    "basicWeb": "Belajar Dasar Pemrograman Web",
-    "basicWebFrontEnd": "Belajar Membuat Front End Web Untuk Pemula",
-    "financialLiteracy": "Financial Literacy 101",
-    "DevCoach181": "DevCoach 181: Back-End | Teknik Mengamankan Server RESTful API",
-    "DevCoach192": "DevCoach 192: Soft Skill | Atur Prioritas dengan Lebih Cerdas!",
-    "DevCoach198": "DevCoach 198 | Machine Learning dalam Flutter",
-    "DevCoach200": "DevCoach #200: Integrasi IT & AI powered by Asah!"
+    "certificate": {
+      "imphnen": "Bercita-cita Menjadi Programmer Handal namun Enggan Ngoding",
+      "magang": "Magang di PT Imajiku Cipta Media",
+      "basicWeb": "Mempelajari Dasar-Dasar Pemrograman Web",
+      "basicWebFrontEnd": "Belajar Membuat Front-End Web untuk Pemula",
+      "basicJavaScript": "Belajar Dasar Pemrograman JavaScript",
+      "financialLiteracy": "Literasi Keuangan 101"
+    }
   }
 }

@@ -14,10 +14,6 @@
   "projects": {
     "title": "Projects",
     "items": {
-      "ruliLearningReact": {
-        "title": "RuliLearning",
-        "description": "A web-based LMS application built with React and Supabase. It uses Augmented Reality to display 3D objects in real-world environments."
-      },
       "tanyaArul": {
         "title": "tanyaArul",
         "description": "A web-based question and answer assistant built with React and Gemini AI."
@@ -45,6 +41,10 @@
       "catatan": {
         "title": "Catatan",
         "description": "A Flutter-based note-taking application that uses Firebase for data storage and Google Generative AI for an intelligent chat feature."
+      },
+      "ruliConnect": {
+        "title": "RuliConnect",
+        "description": "A social platform for personal branding, content sharing, and real-time interaction with a modern UI."
       }
     }
   },
@@ -59,6 +59,9 @@
     },
     "ruliLearning": {
       "description": "RuliLearning: A Laravel-based LMS web application for free and premium learning materials, using Midtrans for payments and sending confirmation emails."
+    },
+    "ruliConnect": {
+      "description": "A social platform for personal branding, content sharing, and real-time interaction with a modern UI."
     },
     "internship": {
       "role": "Front End Developer",
@@ -77,13 +80,11 @@
     "view": "Click to view certificate",
     "certificate": {
       "imphnen": "Aspiring to be a Skilled Programmer but Reluctant to Code",
+      "magang": "Internship at PT Imajiku Cipta Media",
       "basicWeb": "Learning the Basics of Web Programming",
       "basicWebFrontEnd": "Learning to Create Web Front-End for Beginners",
-      "financialLiteracy": "Financial Literacy 101",
-      "DevCoach181": "DevCoach 181: Back-End | Securing RESTful API Server Techniques",
-      "DevCoach192": "DevCoach 192: Soft Skill | Prioritize Smarter: Master Your Time!",
-      "DevCoach198": "DevCoach 198 | Machine Learning in Flutter",
-      "DevCoach200": "DevCoach #200: IT & AI Integration powered by Asah!"
+      "basicJavaScript": "Learn JavaScript Programming Basics",
+      "financialLiteracy": "Financial Literacy 101"
     }
   }
 }
