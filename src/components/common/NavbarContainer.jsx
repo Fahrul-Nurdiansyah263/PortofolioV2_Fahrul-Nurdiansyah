@@ -79,7 +79,7 @@ export default function NavbarContainer() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
-                href="https://drive.google.com/file/d/1SkhUbFgiIuGZ892WodqnYzJCZT-I5TRp/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lBeiV0GKdgIqpGFuoIK3omg7PbtNemUg/view?usp=sharing"
               >
                 CV
               </NavbarButton>
