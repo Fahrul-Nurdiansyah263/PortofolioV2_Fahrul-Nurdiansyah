@@ -86,5 +86,8 @@
       "basicJavaScript": "Belajar Dasar Pemrograman JavaScript",
       "financialLiteracy": "Literasi Keuangan 101"
     }
+  },
+  "loading": {
+    "viewOnDesktop": "Lihat di dekstop/pc untuk tampilan yang lebih baik"
   }
 }

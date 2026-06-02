@@ -86,5 +86,8 @@
       "basicJavaScript": "Learn JavaScript Programming Basics",
       "financialLiteracy": "Financial Literacy 101"
     }
+  },
+  "loading": {
+    "viewOnDesktop": "View on desktop/PC for a better experience"
   }
 }

@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
-// const App = () => {
-//   return (
-//    
-//   );
-// };
+import { useLanguage } from "../context/LanguageContext";
 
 export default function LoadingScreen({ duration }) {
+  const { translation } = useLanguage();
   const [percentage, setPercentage] = useState(0)
 
   useEffect(() => {
@@ -40,7 +36,7 @@ export default function LoadingScreen({ duration }) {
       </p>
 
       <p className='text-base text-slate-300 text-center px-4'>
-        Lihat di dekstop/pc untuk tampilan yang lebih baik
+        {translation("loading.viewOnDesktop")}
       </p>
     </div>
   )
