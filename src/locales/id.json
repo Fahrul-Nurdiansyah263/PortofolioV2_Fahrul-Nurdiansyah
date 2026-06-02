@@ -18,9 +18,9 @@
         "title": "tanyaArul",
         "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
       },
-      "movies": {
-        "title": "FahrulMovies21",
-        "description": "Aplikasi web sederhana untuk menampilkan informasi film yang dibangun dengan Bootstrap."
+      "ruligamelist": {
+        "title": "RuliGameList",
+        "description": "Sebuah portal penemuan game yang dibangun untuk mengeksplorasi manajemen data frontend modern."
       },
       "voiceAssistant": {
         "title": "Ruli - Asisten Suara",
@@ -38,9 +38,9 @@
         "title": "RuliKlinik",
         "description": "Aplikasi web Laravel untuk manajemen klinik, fitur pendaftaran pasien melalui email, manajemen data admin, dan fitur hapus sementara (soft deletes)."
       },
-      "catatan": {
-        "title": "Catatan",
-        "description": "Aplikasi pencatat berbasis Flutter yang menggunakan Firebase untuk penyimpanan data dan Google Generative AI untuk fitur chat cerdas."
+      "vetrack": {
+        "title": "VeTrack",
+        "description": "Aplikasi web untuk monitoring, pengelolaan, dan pemesanan armada kendaraan dinas pertambangan secara terpusat."
       },
       "ruliConnect": {
         "title": "RuliConnect",

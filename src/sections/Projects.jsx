@@ -4,12 +4,17 @@ import {
     FaReact, FaHtml5, FaLaravel, FaJs, FaGoogleDrive,
     FaGithub, FaPhp, FaPython, FaBootstrap, FaCss3Alt
 } from "react-icons/fa";
-import { SiTailwindcss, SiGooglefonts, SiMysql } from "react-icons/si";
+import {
+    SiGooglefonts, SiMysql, SiTypescript, SiFilament, SiNextdotjs,
+    SiTailwindcss,
+    SiAxios,
+    SiReactquery,
+    SiReactrouter,
+    SiFramer,
+  SiVite,
+} from "react-icons/si";
 import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
-import { FaFlutter } from "react-icons/fa6";
-import { IoLogoFirebase } from "react-icons/io5";
 import { AiOutlineOpenAI } from "react-icons/ai";
-import { SiFilament, SiNextdotjs } from "react-icons/si";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Projects() {
@@ -26,7 +31,7 @@ export default function Projects() {
                     img="/Projects/ruliconnect.png"
                     githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliConnect"
                     icon={<>
-                        <SiNextdotjs className="text-black " />
+                        <SiNextdotjs className="text-black dark:text-white" />
                         <SiTailwindcss className="text-cyan-500" />
                         <RiSupabaseFill className="text-green-500" />
                         <SiGooglefonts className="text-yellow-600" />
@@ -50,13 +55,18 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    title={translation("projects.items.movies.title")}
-                    description={translation("projects.items.movies.description")}
-                    img="/Projects/FahrulMovies21.png"
-                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/FahrulMovies21"
+                    title={translation("projects.items.ruligamelist.title")}
+                    description={translation("projects.items.ruligamelist.description")}
+                    img="/Projects/RuliGameList.png"
+                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/RuliGameReact"
                     icon={<>
-                        <FaReact className="text-sky-400 " />
-                        <FaBootstrap className="text-purple-600" />
+                        <FaReact className="text-sky-400" />
+                        <SiTypescript className="text-blue-500" />
+                        <SiTailwindcss className="text-cyan-400" />
+                        <SiReactquery className="text-red-500" />
+                        <SiAxios className="text-purple-500" />
+                        <SiReactrouter className="text-red-400" />
+                        <SiFramer className="text-pink-500" />
                     </>
                     }
                 />
@@ -129,14 +139,16 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    title={translation("projects.items.catatan.title")}
-                    img=""
-                    description={translation("projects.items.catatan.description")}
-                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/catatan_flutter-firebase"
+                    title={translation("projects.items.vetrack.title")}
+                    img="/Projects/vetrack.png"
+                    description={translation("projects.items.vetrack.description")}
+                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/VeTrack"
                     icon={<>
-                        <FaFlutter className="text-sky-500" />
-                        <IoLogoFirebase className="text-amber-400" />
-                        <RiGeminiFill className="text-blue-500" />
+                        <FaLaravel className="text-red-500" />
+                        <FaPhp className="text-indigo-500" />
+                        <SiMysql className="text-blue-500" />
+                        <SiTailwindcss className="text-cyan-400" />
+                        <SiVite className="text-purple-500" />
                     </>
                     }
                 />

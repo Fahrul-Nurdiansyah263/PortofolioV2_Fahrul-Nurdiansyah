@@ -18,9 +18,9 @@
         "title": "tanyaArul",
         "description": "A web-based question and answer assistant built with React and Gemini AI."
       },
-      "movies": {
-        "title": "FahrulMovies21",
-        "description": "A simple web application to display movie information built with Bootstrap."
+      "ruligamelist": {
+        "title": "RuliGameList",
+        "description": "A Game Discovery Portal built to explore modern frontend data management."
       },
       "voiceAssistant": {
         "title": "Ruli - Voice Assistants",
@@ -38,9 +38,9 @@
         "title": "RuliKlinik",
         "description": "RuliKlinik is a Laravel web application for clinic management, featuring patient registration via email, admin data management, and soft deletes."
       },
-      "catatan": {
-        "title": "Catatan",
-        "description": "A Flutter-based note-taking application that uses Firebase for data storage and Google Generative AI for an intelligent chat feature."
+      "vetrack": {
+        "title": "VeTrack",
+        "description": "Web application for centralized monitoring, management, and ordering of mining service vehicle fleets."
       },
       "ruliConnect": {
         "title": "RuliConnect",

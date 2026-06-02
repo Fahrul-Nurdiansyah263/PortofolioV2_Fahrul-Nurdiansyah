@@ -40,7 +40,7 @@ export default function NavbarContainer() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <NavbarButton variant="secondary" href="#footer">Hire Me</NavbarButton>
-            <NavbarButton variant="primary" href="https://drive.google.com/file/d/1bPJ8Aanx9ghahLmaQre_Ip9CM5sWmUyK/view?usp=sharing">CV</NavbarButton>
+            <NavbarButton variant="primary" href="https://drive.google.com/file/d/1Zyq3crzjQl-keAERfLKHttHGv9AytrPv/view">CV</NavbarButton>
           </div>
         </NavBody>
         <MobileNav>
@@ -79,7 +79,7 @@ export default function NavbarContainer() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
-                href="https://drive.google.com/file/d/1bPJ8Aanx9ghahLmaQre_Ip9CM5sWmUyK/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Zyq3crzjQl-keAERfLKHttHGv9AytrPv/view"
               >
                 CV
               </NavbarButton>
