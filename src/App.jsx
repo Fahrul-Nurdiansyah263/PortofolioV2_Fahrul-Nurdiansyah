@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
 import Home from './sections/Home'
 import About from './sections/About'
 import NavbarContainer from "./components/common/NavbarContainer"
@@ -30,6 +31,17 @@ export default function App() {
       setIsLoading(false)
     }
   }, [])
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60,
+      delay: 0,
+    })
+    AOS.refresh()
+  }, [isLoading])
 
   if (isMobile && isLoading) {
     return <LoadingScreen duration={LOADING_DURATION} />
