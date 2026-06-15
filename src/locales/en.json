@@ -14,6 +14,10 @@
   "projects": {
     "title": "Projects",
     "items": {
+      "baksoMasJoni": {
+        "title": "Bakso Mas Joni",
+        "description": "Turning my father's business challenges into a digital solution for inventory, sales, and financial management."
+      },
       "tanyaArul": {
         "title": "tanyaArul",
         "description": "A web-based question and answer assistant built with React and Gemini AI."

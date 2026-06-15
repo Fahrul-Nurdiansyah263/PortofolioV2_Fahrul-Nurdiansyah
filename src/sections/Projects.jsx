@@ -81,16 +81,18 @@ export default function Projects() {
                     }
                 />
                 <ThreeDCard
-                    title={translation("projects.items.library.title")}
-                    description={translation("projects.items.library.description")}
-                    img="/Projects/web-perpustakaan.png"
-                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/web-perpustakaan"
-                    icon={<>
-                        <FaHtml5 className="text-orange-600" />
-                        <FaCss3Alt className="text-blue-600" />
-                        <FaBootstrap className="text-purple-600" />
-                        <FaPhp className="text-indigo-500" />
-                    </>
+                    title={translation("projects.items.baksoMasJoni.title")}
+                    description={translation("projects.items.baksoMasJoni.description")}
+                    img="/Projects/baksomasjoni.png"
+                    githubUrl="https://github.com/Fahrul-Nurdiansyah263/Bakso-Mas-Joni-APP---FIX"
+                   icon={
+                        <>
+                            <FaLaravel className="text-red-600" />
+                            <SiFilament className="text-orange-500" />
+                            <SiMysql className="text-blue-600" />
+                            <SiTailwindcss className="text-cyan-500" />
+                            <RiGeminiFill className="text-blue-500" />
+                        </>
                     }
                 />
                 <ThreeDCard

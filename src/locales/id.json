@@ -18,6 +18,10 @@
         "title": "tanyaArul",
         "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
       },
+      "baksoMasJoni": {
+        "title": "Bakso Mas Joni",
+        "description": "Mengubah tantangan bisnis ayah saya menjadi solusi digital untuk pengelolaan stok, penjualan, dan keuangan."
+      },
       "ruligamelist": {
         "title": "RuliGameList",
         "description": "Sebuah portal penemuan game yang dibangun untuk mengeksplorasi manajemen data frontend modern."
