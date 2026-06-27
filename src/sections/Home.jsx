@@ -5,14 +5,13 @@ import { useTheme } from "../context/ThemeContext"
 export default function Home() {
     const { dark } = useTheme();
     return (
-        <div id="#home" className="dark:bg-black bg-white py-20  mx-auto h-auto  xl:h-screen sm:py-0">
-            <div className="relative ml-5 dark:bg-black bg-white  sm:ml-20 pt-5">
+        <div id="#home" className="dark:bg-black bg-white py-20 max-w-7xl  mx-auto h-auto  xl:h-screen sm:py-0">
+            <div className="relative ml-5 dark:bg-black bg-white  sm:ml-20 pt-5 xl:pt-20">
                 <TextPressure
                     text="Fahrul    "
                     flex={true}
                     alpha={false}
                     stroke={false}
-                    weight={true}
                     italic={true}
                     textColor={dark ? "#ffffff" : "#000000"}
                     strokeColor="#ff0000"
@@ -25,7 +24,6 @@ export default function Home() {
                     flex={true}
                     alpha={false}
                     stroke={false}
-                    weight={true}
                     italic={true}
                     textColor={dark ? "#ffffff" : "#000000"}
                     strokeColor="#ff0000"
