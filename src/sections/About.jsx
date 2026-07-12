@@ -10,7 +10,7 @@ export default function About() {
     <section
       id="about"
       className="dark:bg-black dark:text-white bg-white text-black w-full md:py-16 max-w-7xl mx-auto flex flex-col items-center justify-center gap-16 font-inter">
-      <div className="w-full flex flex-col lg:flex-row items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center">
         <div className="flex flex-col">
           <h1 className="text-4xl xl:pl-10 mb-5 md:mb-0 md:text-5xl font-bold md:col-start-1 md:row-start-1 xl:-mt-20  ">
             {translation("about.title")}
@@ -52,7 +52,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="canvas-wrapper relative overflow-auto w-full md:col-start-2 md:row-start-1 md:row-span-2 flex xl:w-[900px] lg:w-[600px] items-center justify-center">
+        <div className="canvas-wrapper relative overflow-auto w-full md:col-start-2 md:row-start-1 md:row-span-2 flex xl:w-[500px] lg:w-[600px] items-center justify-center">
           <Lanyard position={[0, 0, 15]} gravity={[0, -80, 0]} />
         </div>
 
