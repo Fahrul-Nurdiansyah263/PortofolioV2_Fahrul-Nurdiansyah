@@ -1,12 +1,4 @@
-// Component ported from https://codepen.io/JuanFuentes/full/rgXKGQ
-
 import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
-
-const dist = (a, b) => {
-  const dx = b.x - a.x;
-  const dy = b.y - a.y;
-  return Math.sqrt(dx * dx + dy * dy);
-};
 
 const getAttr = (distance, maxDist, minVal, maxVal) => {
   const val = maxVal - Math.abs((maxVal * distance) / maxDist);
@@ -17,9 +9,7 @@ const debounce = (func, delay) => {
   let timeoutId;
   return (...args) => {
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      func.apply(this, args);
-    }, delay);
+    timeoutId = setTimeout(() => func.apply(this, args), delay);
   };
 };
 
@@ -27,22 +17,19 @@ const TextPressure = ({
   text = 'Compressa',
   fontFamily = 'Roboto Flex',
   fontUrl = 'https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap',
-
   width = true,
   weight = true,
   italic = true,
   alpha = false,
-
   flex = true,
   stroke = false,
   scale = false,
-
   textColor = '#FFFFFF',
   strokeColor = '#FF0000',
   strokeWidth = 2,
   className = '',
-
-  minFontSize = 24
+  minFontSize = 24,
+  fps = 30 // throttle animasi, dulunya nempel di 60fps browser
 }) => {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
@@ -50,6 +37,11 @@ const TextPressure = ({
 
   const mouseRef = useRef({ x: 0, y: 0 });
   const cursorRef = useRef({ x: 0, y: 0 });
+  const lastMouseRef = useRef({ x: -9999, y: -9999 }); // buat cek "mouse hampir gak gerak"
+
+  // cache posisi center tiap karakter relatif ke title, di-hitung ulang cuma saat resize
+  const charCentersRef = useRef([]);
+  const maxDistRef = useRef(1);
 
   const [fontSize, setFontSize] = useState(minFontSize);
   const [scaleY, setScaleY] = useState(1);
@@ -57,6 +49,7 @@ const TextPressure = ({
 
   const chars = text.split('');
 
+  // === setup posisi mouse awal ===
   useEffect(() => {
     const handleMouseMove = e => {
       cursorRef.current.x = e.clientX;
@@ -68,7 +61,7 @@ const TextPressure = ({
       cursorRef.current.y = t.clientY;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
 
     if (containerRef.current) {
@@ -83,6 +76,22 @@ const TextPressure = ({
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('touchmove', handleTouchMove);
     };
+  }, []);
+
+  // === hitung ulang cache posisi karakter, cuma saat resize/mount ===
+  const measureCharCenters = useCallback(() => {
+    if (!titleRef.current) return;
+    const titleRect = titleRef.current.getBoundingClientRect();
+    maxDistRef.current = titleRect.width / 2 || 1;
+
+    charCentersRef.current = spansRef.current.map(span => {
+      if (!span) return { x: 0, y: 0 };
+      const rect = span.getBoundingClientRect();
+      return {
+        x: rect.x + rect.width / 2 - titleRect.x, // relatif ke title, biar gampang di-offset ulang
+        y: rect.y + rect.height / 2 - titleRect.y
+      };
+    });
   }, []);
 
   const setSize = useCallback(() => {
@@ -106,8 +115,11 @@ const TextPressure = ({
         setScaleY(yRatio);
         setLineHeight(yRatio);
       }
+
+      // ukur ulang posisi char setelah layout settle
+      measureCharCenters();
     });
-  }, [chars.length, minFontSize, scale]);
+  }, [chars.length, minFontSize, scale, measureCharCenters]);
 
   useEffect(() => {
     const debouncedSetSize = debounce(setSize, 100);
@@ -116,49 +128,80 @@ const TextPressure = ({
     return () => window.removeEventListener('resize', debouncedSetSize);
   }, [setSize]);
 
+  // === IntersectionObserver: pause animasi kalau di luar viewport ===
+  const isVisibleRef = useRef(true);
+  useEffect(() => {
+    if (!containerRef.current || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // === main animation loop, throttled + tanpa getBoundingClientRect per frame ===
   useEffect(() => {
     let rafId;
-    const animate = () => {
+    let lastTime = 0;
+    const frameInterval = 1000 / fps;
+    const MOVE_THRESHOLD = 0.5; // px, skip update kalau mouse gerak dikit banget
+
+    const animate = time => {
+      rafId = requestAnimationFrame(animate);
+
+      if (!isVisibleRef.current) return;
+
+      if (time - lastTime < frameInterval) return;
+      lastTime = time;
+
       mouseRef.current.x += (cursorRef.current.x - mouseRef.current.x) / 15;
       mouseRef.current.y += (cursorRef.current.y - mouseRef.current.y) / 15;
 
-      if (titleRef.current) {
-        const titleRect = titleRef.current.getBoundingClientRect();
-        const maxDist = titleRect.width / 2;
+      const dx = mouseRef.current.x - lastMouseRef.current.x;
+      const dy = mouseRef.current.y - lastMouseRef.current.y;
+      if (Math.abs(dx) < MOVE_THRESHOLD && Math.abs(dy) < MOVE_THRESHOLD) return;
+      lastMouseRef.current.x = mouseRef.current.x;
+      lastMouseRef.current.y = mouseRef.current.y;
 
-        spansRef.current.forEach(span => {
-          if (!span) return;
+      if (!titleRef.current) return;
+      const titleRect = titleRef.current.getBoundingClientRect(); // cuma 1x per frame, bukan per-char
+      const maxDist = maxDistRef.current;
 
-          const rect = span.getBoundingClientRect();
-          const charCenter = {
-            x: rect.x + rect.width / 2,
-            y: rect.y + rect.height / 2
-          };
+      spansRef.current.forEach((span, i) => {
+        if (!span) return;
+        const center = charCentersRef.current[i];
+        if (!center) return;
 
-          const d = dist(mouseRef.current, charCenter);
+        // posisi absolut char = posisi title (yang baru diukur 1x) + offset cache
+        const charAbsX = titleRect.x + center.x;
+        const charAbsY = titleRect.y + center.y;
 
-          const wdth = width ? Math.floor(getAttr(d, maxDist, 5, 200)) : 100;
-          const wght = weight ? Math.floor(getAttr(d, maxDist, 100, 900)) : 400;
-          const italVal = italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : 0;
-          const alphaVal = alpha ? getAttr(d, maxDist, 0, 1).toFixed(2) : 1;
+        const ddx = mouseRef.current.x - charAbsX;
+        const ddy = mouseRef.current.y - charAbsY;
+        const d = Math.sqrt(ddx * ddx + ddy * ddy);
 
-          const newFontVariationSettings = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
+        const wdth = width ? Math.floor(getAttr(d, maxDist, 5, 200)) : 100;
+        const wght = weight ? Math.floor(getAttr(d, maxDist, 100, 900)) : 400;
+        const italVal = italic ? getAttr(d, maxDist, 0, 1).toFixed(2) : 0;
+        const alphaVal = alpha ? getAttr(d, maxDist, 0, 1).toFixed(2) : 1;
 
-          if (span.style.fontVariationSettings !== newFontVariationSettings) {
-            span.style.fontVariationSettings = newFontVariationSettings;
-          }
-          if (alpha && span.style.opacity !== alphaVal) {
-            span.style.opacity = alphaVal;
-          }
-        });
-      }
+        const newFontVariationSettings = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
 
-      rafId = requestAnimationFrame(animate);
+        if (span.style.fontVariationSettings !== newFontVariationSettings) {
+          span.style.fontVariationSettings = newFontVariationSettings;
+        }
+        if (alpha && span.style.opacity !== alphaVal) {
+          span.style.opacity = alphaVal;
+        }
+      });
     };
 
-    animate();
+    rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
-  }, [width, weight, italic, alpha]);
+  }, [width, weight, italic, alpha, fps]);
 
   const styleElement = useMemo(() => {
     return (

@@ -9,7 +9,7 @@ export const useMouseEnter = () => {
   return context;
 };
 
-export const CardContainer = ({ children, className, containerClassName }) => {
+export const CardContainer = ({ children, className, containerClassName, onClick }) => {
   const ref = useRef(null);
   const [hover, setHover] = useState(false);
 
@@ -34,6 +34,7 @@ export const CardContainer = ({ children, className, containerClassName }) => {
           onMouseEnter={() => setHover(true)}
           onMouseMove={onMove}
           onMouseLeave={onLeave}
+          onClick={onClick}
           className={cn("transition-all duration-200", className)}
           style={{ transformStyle: "preserve-3d" }}
         >

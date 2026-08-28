@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import Home from './sections/Home'
+import { Routes, Route } from "react-router-dom";
+import Home from './sections/Hero'
 import About from './sections/About'
 import NavbarContainer from "./components/common/NavbarContainer"
 import Projects from './sections/Projects'
@@ -32,40 +32,36 @@ export default function App() {
     }
   }, [])
 
-  useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60,
-      delay: 0,
-    })
-    AOS.refresh()
-  }, [isLoading])
-
   if (isMobile && isLoading) {
     return <LoadingScreen duration={LOADING_DURATION} />
   }
   return (
-     <div className="relative dark:bg-black min-h-screen">
+    <div className="relative dark:bg-black min-h-screen">
+      <Routes>
+        <Route path="/" element={<>
+          <nav className="sticky top-5 inset-x-0 z-50">
+            <NavbarContainer />
+          </nav>
 
-      <nav className="sticky top-5 inset-x-0 z-50">
-        <NavbarContainer />
-      </nav>
+          <main>
+            <section id="home"><Home /></section>
+            <section id="about"><About /></section>
+            <section id="projects"><Projects limit={8} showFilter={false} /></section>
+            <section id="timeline"><TimelineDemo /></section>
+            <section id="achievement"><Achievement /></section>
+          </main>
 
-      <main>
-        <section id="home"><Home /></section>
-        <section id="about"><About /></section>
-        <section id="projects"><Projects /></section>
-        <section id="timeline"><TimelineDemo /></section>
-        <section id="achievement"><Achievement /></section>
-      </main>
-      
-      <footer>
-        <Footer />
-      </footer>
-      
-
+          <footer>
+            <Footer />
+          </footer>
+        </>} />
+        <Route path="/projects" element={
+          <>
+            <Projects />
+            <Footer />
+          </>
+        } />
+      </Routes>
       <FloatingControls />
     </div>
   )

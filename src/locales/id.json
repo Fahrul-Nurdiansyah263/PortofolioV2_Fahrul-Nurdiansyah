@@ -6,66 +6,134 @@
     "hireme": "Rekrut Saya"
   },
   "about": {
-    "title": "Tentang Saya",
-    "description1": "Halo! Saya Fahrul Nurdiansyah seorang pengembang web yang bersemangat dalam mengubah ide-ide kompleks menjadi aplikasi web yang elegan dan fungsional. Perjalanan saya di dunia digital dimulai sejak saya memasuki kuliah yaitu pada tahun 2022, dan sejak saat itu, saya tidak pernah berhenti belajar dan mengeksplorasi teknologi baru.",
-    "description2": "Saya sangat menikmati proses memecahkan masalah dan berkolaborasi dalam tim untuk menciptakan solusi yang berdampak positif. Bagi saya, coding bukan hanya tentang menulis baris kode, tapi tentang membangun jembatan antara manusia dan teknologi.",
-    "description3": "Di luar coding, saya percaya pentingnya komunikasi yang baik, manajemen waktu, dan pembelajaran berkelanjutan. Dengan kombinasi keterampilan teknis dan soft skill ini, saya berusaha menghadirkan solusi yang tidak hanya berfungsi, tetapi juga memberikan pengalaman terbaik bagi pengguna."
+    "title": "Kenali Saya",
+    "subtitle": "Bukan sekadar seorang developer — kenali sedikit tentang sosok di balik setiap baris kode.",
+    "description1": "Saya Fahrul Nurdiansyah, seorang Web Developer yang senang mengubah ide menjadi produk digital yang fungsional, modern, dan mudah digunakan. Saya mulai mendalami web development sejak 2022, dan sejak saat itu terus belajar, bereksperimen, serta membangun berbagai proyek untuk mengembangkan kemampuan saya.",
+    "description2": "Saya menikmati proses memecahkan masalah, merancang solusi, dan membangun aplikasi dari awal hingga siap digunakan. Bagi saya, coding bukan hanya tentang menulis kode, tetapi tentang bagaimana teknologi dapat menyelesaikan masalah dan menciptakan pengalaman yang lebih baik bagi pengguna.",
+    "description3": "Saya percaya bahwa perkembangan datang dari rasa ingin tahu dan kemauan untuk terus belajar. Karena itu, saya selalu terbuka terhadap teknologi baru, feedback, dan kesempatan untuk berkolaborasi. Saya ingin terus berkembang sebagai developer sekaligus menciptakan produk yang memberikan value nyata."
   },
   "projects": {
     "title": "Proyek",
+    "subtitle": "Hal-hal yang telah saya buat dan kerjakan.",
     "items": {
       "tanyaArul": {
         "title": "tanyaArul",
-        "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
+        "description": "Asisten tanya jawab berbasis AI yang dibangun dengan React dan Gemini untuk memberikan jawaban secara interaktif.",
+        "problem": "Mencari jawaban dari berbagai sumber secara manual dapat memakan waktu dan membutuhkan proses pencarian yang berulang.",
+        "solution": "Membangun aplikasi tanya jawab berbasis AI menggunakan Gemini yang memungkinkan pengguna mendapatkan jawaban melalui antarmuka percakapan yang sederhana."
       },
       "baksoMasJoni": {
         "title": "Bakso Mas Joni",
-        "description": "Mengubah tantangan bisnis ayah saya menjadi solusi digital untuk pengelolaan stok, penjualan, dan keuangan."
+        "description": "Sistem manajemen berbasis web untuk membantu pengelolaan stok, penjualan, dan keuangan usaha.",
+        "problem": "Pencatatan stok, penjualan, dan keuangan yang dilakukan secara manual menyulitkan pemilik usaha dalam memantau data secara akurat.",
+        "solution": "Membangun sistem terpusat untuk mengelola stok, mencatat transaksi penjualan, dan mengorganisir data keuangan agar lebih mudah dipantau."
       },
       "ruligamelist": {
         "title": "RuliGameList",
-        "description": "Sebuah portal penemuan game yang dibangun untuk mengeksplorasi manajemen data frontend modern."
+        "description": "Aplikasi web untuk menemukan dan mengeksplorasi berbagai game dengan antarmuka frontend yang modern.",
+        "problem": "Informasi game yang tersebar dan tampilan yang kurang terstruktur dapat membuat pengguna kesulitan menemukan game yang sesuai.",
+        "solution": "Membangun platform discovery game dengan penyajian data yang terstruktur serta fitur pencarian dan filtering untuk mempermudah eksplorasi."
       },
       "voiceAssistant": {
         "title": "Ruli - Asisten Suara",
-        "description": "Ruli: Asisten virtual Python untuk perintah suara, pencarian Wikipedia, membuka situs web, dan memutar musik."
+        "description": "Asisten virtual berbasis Python yang dapat menjalankan perintah suara, mencari informasi, membuka website, dan memutar musik.",
+        "problem": "Menjalankan tugas sederhana secara manual berulang kali dapat membutuhkan waktu dan interaksi yang tidak perlu.",
+        "solution": "Mengembangkan asisten virtual berbasis Python yang dapat menjalankan berbagai tugas melalui perintah suara seperti pencarian Wikipedia, membuka website, dan memutar musik."
       },
       "library": {
         "title": "Web Perpustakaan",
-        "description": "Aplikasi web sederhana yang dirancang untuk memudahkan pengelolaan data buku dan aktivitas peminjaman di perpustakaan."
+        "description": "Aplikasi web untuk membantu pengelolaan data buku, peminjaman, dan pengembalian di perpustakaan.",
+        "problem": "Pengelolaan data buku dan transaksi peminjaman secara manual dapat menyulitkan proses pencatatan serta pemantauan ketersediaan buku.",
+        "solution": "Membangun aplikasi terpusat untuk mengelola data buku, transaksi peminjaman, dan pengembalian secara lebih terstruktur."
       },
       "ruliLearningLaravel": {
         "title": "RuliLearning",
-        "description": "Aplikasi LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, menggunakan Midtrans untuk pembayaran dan pengiriman email konfirmasi otomatis."
+        "description": "Platform LMS berbasis Laravel untuk menyediakan materi pembelajaran gratis dan premium dengan integrasi pembayaran Midtrans.",
+        "problem": "Pengelolaan materi pembelajaran premium dan proses pembayaran secara manual dapat menciptakan pengalaman belajar yang kurang efisien.",
+        "solution": "Mengembangkan LMS berbasis Laravel dengan manajemen materi, konten premium, integrasi pembayaran Midtrans, dan pengiriman email konfirmasi otomatis."
       },
       "ruliKlinik": {
         "title": "RuliKlinik",
-        "description": "Aplikasi web Laravel untuk manajemen klinik, fitur pendaftaran pasien melalui email, manajemen data admin, dan fitur hapus sementara (soft deletes)."
+        "description": "Aplikasi web berbasis Laravel untuk membantu pengelolaan data pasien dan administrasi klinik.",
+        "problem": "Pencatatan dan pengelolaan data pasien secara manual dapat menyulitkan staf dalam menjaga data tetap terorganisir.",
+        "solution": "Membangun sistem manajemen klinik untuk menangani pendaftaran pasien dan pengelolaan data administrasi secara terstruktur."
       },
       "vetrack": {
         "title": "VeTrack",
-        "description": "Aplikasi web untuk monitoring, pengelolaan, dan pemesanan armada kendaraan dinas pertambangan secara terpusat."
+        "description": "Aplikasi web untuk monitoring, pengelolaan, dan pemesanan armada kendaraan dinas pertambangan secara terpusat.",
+        "problem": "Pengelolaan armada melalui data yang terpisah membuat proses monitoring kendaraan, layanan, dan pemesanan menjadi kurang efisien.",
+        "solution": "Membangun sistem terpusat untuk memantau kendaraan, mengelola data layanan, dan menangani pemesanan armada."
       },
       "ruliConnect": {
         "title": "RuliConnect",
-        "description": "Platform sosial untuk personal branding, berbagi konten, dan interaksi waktu nyata dengan UI modern."
+        "description": "Platform sosial untuk personal branding, berbagi konten, dan berinteraksi secara real-time.",
+        "problem": "Pengguna membutuhkan tempat terpusat untuk membangun personal branding, membagikan konten, dan berinteraksi dengan pengguna lain.",
+        "solution": "Membangun platform sosial yang menggabungkan personal branding, berbagi konten, dan interaksi real-time dalam satu antarmuka modern."
+      },
+      "catatan": {
+        "title": "Catatan",
+        "description": "Aplikasi catatan berbasis Flutter yang menggunakan Firebase untuk penyimpanan data dan Google Generative AI untuk fitur obrolan cerdas.",
+        "problem": "Pengguna membutuhkan cara yang praktis untuk mencatat, mengelola, dan mencari informasi dalam catatan mereka, serta mendapatkan bantuan saat membutuhkan informasi tambahan.",
+        "solution": "Membangun aplikasi catatan dengan Firebase sebagai penyimpanan data dan Google Generative AI sebagai asisten obrolan cerdas untuk membantu pengguna berinteraksi dengan catatan secara lebih efektif."
+      },
+      "fahrulMovies": {
+        "title": "FahrulMovies21",
+        "description": "FahrulMovies21 adalah aplikasi web sederhana berbasis React yang menampilkan informasi film dengan Bootstrap untuk menghasilkan tampilan antarmuka yang responsif dan menarik.",
+        "problem": "Sebagai proyek pertama, saya ingin memahami bagaimana React digunakan untuk membangun aplikasi web serta bagaimana menampilkan dan mengelola data film dalam sebuah antarmuka.",
+        "solution": "Membangun aplikasi katalog film sederhana menggunakan React dan Bootstrap untuk mempelajari dasar-dasar component, rendering data, dan pembuatan antarmuka web yang responsif."
+      },
+      "zanila": {
+        "title": "Zanila In Bloom",
+        "description": "Zanila In Bloom adalah aplikasi web e-commerce modern berbasis Next.js yang dirancang untuk toko bunga. Aplikasi ini memudahkan pelanggan dalam melakukan pemesanan buket bunga sekaligus menyediakan Dashboard Admin untuk mengelola dan memproses pesanan.",
+        "problem": "Proses pemesanan bunga yang masih dilakukan secara manual dapat menyulitkan pelanggan dan membuat pengelolaan pesanan menjadi kurang efisien bagi pemilik toko.",
+        "solution": "Membangun sistem e-commerce yang memungkinkan pelanggan melakukan pemesanan secara online, mengunggah bukti pembayaran, serta menyediakan Dashboard Admin untuk memverifikasi pembayaran dan mengelola status pesanan secara terpusat."
+      },
+      "myCalculator": {
+        "title": "MyCalculator",
+        "description": "MyCalculator adalah aplikasi kalkulator berbasis teks sederhana yang dibangun menggunakan Python untuk melakukan berbagai operasi matematika dasar melalui antarmuka baris perintah.",
+        "problem": "Pengguna membutuhkan cara sederhana untuk melakukan perhitungan matematika dasar tanpa menggunakan antarmuka kalkulator yang kompleks.",
+        "solution": "Membangun kalkulator berbasis command-line menggunakan Python yang mendukung operasi penjumlahan, pengurangan, perkalian, pembagian, perpangkatan, dan akar kuadrat."
+      },
+      "jihanLaundry": {
+        "title": "Jihan Laundry",
+        "description": "Jihan Laundry adalah website layanan laundry berbasis web yang dirancang untuk memudahkan pelanggan melihat layanan, menghitung estimasi biaya, melacak status laundry, dan melakukan pemesanan layanan antar-jemput.",
+        "problem": "Pelanggan sering kesulitan mengetahui estimasi biaya laundry, informasi layanan, serta status cucian tanpa harus menghubungi atau datang langsung ke outlet.",
+        "solution": "Membangun website laundry yang menyediakan informasi layanan secara terpusat, kalkulator estimasi biaya, fitur pelacakan status laundry, serta akses pemesanan layanan antar-jemput untuk memberikan pengalaman yang lebih praktis bagi pelanggan."
+      },
+      "locationHistoryTracker": {
+        "title": "Location History Tracker",
+        "description": "Flutter Location History Tracker adalah aplikasi mobile berbasis Flutter yang dirancang untuk mencatat dan menyimpan riwayat lokasi pengguna secara otomatis maupun manual. Data lokasi disimpan secara lokal menggunakan SQLite sehingga aplikasi dapat berjalan tanpa backend.",
+        "problem": "Pengguna membutuhkan cara untuk mencatat dan melihat riwayat lokasi secara berkala tanpa harus membuka aplikasi setiap saat, termasuk ketika perangkat sedang offline.",
+        "solution": "Membangun aplikasi Flutter dengan pencatatan lokasi otomatis menggunakan Workmanager dan pencatatan manual melalui GPS. Riwayat lokasi disimpan secara lokal menggunakan SQLite, sementara Provider digunakan untuk mengelola state aplikasi secara reaktif."
+      },
+      "geminiAiChatFlutter": {
+        "title": "Gemini Chat AI",
+        "description": "Gemini AI Chat App adalah aplikasi chatbot berbasis Flutter yang terintegrasi dengan Gemini API. Aplikasi ini memungkinkan pengguna berinteraksi dengan AI melalui antarmuka chat yang sederhana dan interaktif.",
+        "problem": "Pengguna membutuhkan cara yang mudah untuk berinteraksi dengan AI melalui perangkat mobile dalam bentuk percakapan yang praktis.",
+        "solution": "Membangun aplikasi chatbot menggunakan Flutter dan Gemini API yang memungkinkan pengguna mengirim pesan dan mendapatkan respons dari AI secara langsung dalam percakapan dua arah."
+      },
+      "ruliSiPenerjemah": {
+        "title": "Ruli Si Penerjemah",
+        "description": "Ruli si Penerjemah adalah aplikasi penerjemah berbasis web sederhana yang memungkinkan pengguna menerjemahkan teks ke berbagai bahasa melalui antarmuka yang ringan dan responsif.",
+        "problem": "Pengguna membutuhkan cara yang praktis untuk menerjemahkan teks ke berbagai bahasa tanpa harus menggunakan antarmuka yang kompleks.",
+        "solution": "Membangun aplikasi penerjemah menggunakan HTML, CSS, dan JavaScript dengan pilihan berbagai bahasa serta menampilkan hasil terjemahan secara langsung melalui antarmuka yang responsif."
       }
     }
   },
   "timeline": {
-    "title": "Jejak Evolusi Digital",
-    "subtitle": "Melihat kembali proses belajar dan pertumbuhan saya di setiap baris kode.",
+    "title": "Pengalaman Saya",
+    "subtitle": "Perjalanan, proyek, dan pengalaman yang membentuk saya sebagai developer.",
     "early2025": "Awal 2025",
     "year2025": "2025",
     "internshipLabel": "Magang",
     "tanyaArul": {
-      "description": "Asisten tanya jawab berbasis web yang dibangun dengan React dan Gemini AI."
+      "description": "Asisten tanya jawab berbasis AI yang dibangun dengan React dan Gemini."
     },
     "ruliLearning": {
-      "description": "RuliLearning: Aplikasi LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, menggunakan Midtrans untuk pembayaran dan pengiriman email konfirmasi otomatis."
+      "description": "Platform LMS berbasis Laravel untuk materi pembelajaran gratis dan premium, dengan integrasi pembayaran Midtrans dan email konfirmasi otomatis."
     },
     "ruliConnect": {
-      "description": "RuliConnect: Platform sosial untuk personal branding, berbagi konten, dan interaksi waktu nyata dengan UI modern."
+      "description": "Platform sosial untuk personal branding, berbagi konten, dan interaksi real-time dengan antarmuka modern."
     },
     "internship": {
       "role": "Front End Developer",
@@ -73,10 +141,10 @@
       "period": "13 Okt 2025 - 13 Feb 2026"
     },
     "experience": {
-      "convertedFigma": "✅ Mengonversi desain Figma menjadi halaman web responsif.",
-      "implementedTheme": "✅ Mengimplementasikan layout tema untuk platform MiWeb.",
-      "improvedUI": "✅ Meningkatkan styling UI dan layout responsif di berbagai perangkat.",
-      "fixedFrontend": "✅ Memperbaiki fungsionalitas front-end dan masalah layout."
+      "convertedFigma": "Mengonversi desain Figma menjadi halaman web responsif.",
+      "implementedTheme": "Mengimplementasikan layout tema untuk platform MiWeb.",
+      "improvedUI": "Meningkatkan styling UI dan layout responsif di berbagai perangkat.",
+      "fixedFrontend": "Memperbaiki fungsionalitas front-end dan masalah layout."
     }
   },
   "achievements": {
@@ -92,6 +160,6 @@
     }
   },
   "loading": {
-    "viewOnDesktop": "Lihat di dekstop/pc untuk tampilan yang lebih baik"
+    "viewOnDesktop": "Lihat di desktop/PC untuk tampilan yang lebih baik"
   }
 }

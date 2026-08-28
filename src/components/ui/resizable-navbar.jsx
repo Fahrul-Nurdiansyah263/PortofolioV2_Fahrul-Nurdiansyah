@@ -136,7 +136,7 @@ export const MobileNavHeader = ({
 }) => {
   return (
     <div
-      className={cn("flex w-full flex-row items-center justify-between", className)}>
+      className={cn("flex w-full flex-row items-center justify-between border border-gray-500 rounded-full px-2 py-1" , className)}>
       {children}
     </div>
   );

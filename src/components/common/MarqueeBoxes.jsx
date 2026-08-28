@@ -1,93 +1,186 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+
 import {
   FaReact,
-  FaHtml5,
   FaLaravel,
   FaJs,
-  FaGoogleDrive,
   FaGithub,
   FaPhp,
+  FaGitAlt,
   FaPython,
-  FaBootstrap,
-  FaCss3Alt,
 } from "react-icons/fa";
-import { SiTailwindcss, SiGooglefonts, SiMysql } from "react-icons/si";
-import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
-import { FaFlutter } from "react-icons/fa6";
-import { IoLogoFirebase } from "react-icons/io5";
-import { AiOutlineOpenAI } from "react-icons/ai";
+
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiSupabase,
+  SiMysql,
+  SiTypescript,
+  SiVercel,
+  SiInertia,
+} from "react-icons/si";
+
+import { RiGeminiFill, RiOpenaiFill } from "react-icons/ri";
+import { TbBrandVscode } from "react-icons/tb";
+import { BsClaude } from "react-icons/bs";
 
 const techIcons1 = [
-  { Icon: FaReact, name: "React", color: "text-sky-400" },
-  { Icon: FaHtml5, name: "HTML5", color: "text-orange-600" },
-  { Icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-500" },
-  { Icon: RiSupabaseFill, name: "Supabase", color: "text-green-500" },
-  { Icon: FaLaravel, name: "Laravel", color: "text-red-500" },
-  { Icon: FaJs, name: "JavaScript", color: "text-yellow-400" },
-  { Icon: FaFlutter, name: "Flutter", color: "text-sky-500" },
-  { Icon: IoLogoFirebase, name: "Firebase", color: "text-amber-400" },
-  { Icon: FaGithub, name: "GitHub", color: "text-neutral-400" },
+  {
+    Icon: FaReact,
+    name: "React",
+    color: "text-sky-400",
+  },
+  {
+    Icon: SiNextdotjs,
+    name: "Next.js",
+    color: "text-gray-900 dark:text-white",
+  },
+  {
+    Icon: FaLaravel,
+    name: "Laravel",
+    color: "text-red-500",
+  },
+  {
+    Icon: SiInertia,
+    name: "Inertia.js",
+    color: "text-purple-500",
+  },
+  {
+    Icon: SiTailwindcss,
+    name: "Tailwind CSS",
+    color: "text-cyan-400",
+  },
+  {
+    Icon: FaJs,
+    name: "JavaScript",
+    color: "text-yellow-400",
+  },
+  {
+    Icon: SiTypescript,
+    name: "TypeScript",
+    color: "text-blue-500",
+  },
+  {
+    Icon: FaPhp,
+    name: "PHP",
+    color: "text-indigo-400",
+  },
 ];
 
 const techIcons2 = [
-  { Icon: FaPhp, name: "PHP", color: "text-indigo-500" },
-  { Icon: FaPython, name: "Python", color: "text-blue-700" },
-  { Icon: SiGooglefonts, name: "G Fonts", color: "text-yellow-600" },
-  { Icon: RiGeminiFill, name: "Gemini", color: "text-blue-500" },
-  { Icon: AiOutlineOpenAI, name: "OpenAI", color: "text-teal-500" },
-  { Icon: SiMysql, name: "MySQL", color: "text-sky-700" },
-  { Icon: FaBootstrap, name: "Bootstrap", color: "text-purple-600" },
-  { Icon: FaCss3Alt, name: "CSS", color: "text-blue-600" },
+  {
+    Icon: SiSupabase,
+    name: "Supabase",
+    color: "text-emerald-400",
+  },
+  {
+    Icon: SiMysql,
+    name: "MySQL",
+    color: "text-sky-500",
+  },
+  {
+    Icon: FaGitAlt,
+    name: "Git",
+    color: "text-orange-500",
+  },
+  {
+    Icon: FaGithub,
+    name: "GitHub",
+    color: "text-gray-800 dark:text-white",
+  },
+  {
+    Icon: SiVercel,
+    name: "Vercel",
+    color: "text-gray-900 dark:text-white",
+  },
+  {
+    Icon: TbBrandVscode,
+    name: "VS Code",
+    color: "text-blue-500",
+  },
+  {
+    Icon: BsClaude,
+    name: "Claude",
+    color: "text-orange-400",
+  },
+  {
+    Icon: RiGeminiFill,
+    name: "Gemini",
+    color: "text-blue-500",
+  },
+  {
+    Icon: RiOpenaiFill,
+    name: "ChatGPT",
+    color: "text-emerald-500",
+  },
 ];
 
-const MarqueeItem = ({ type, item }) => {
-  if (type === "icon") {
-    const { Icon, name, color } = item;
-    return (
-      <div
-        className="w-24 h-16 sm:w-40 sm:h-24 bg-gray-200 text-gray-800 dark:bg-[#1f1f1f] dark:text-white font-semibold
-                   p-2 sm:p-3 mx-1 sm:mx-2 rounded-md shadow-lg
-                   flex flex-col items-center justify-center
-                   text-xs sm:text-sm"
-      >
-        <Icon className={`text-xl sm:text-3xl mb-1 ${color}`} />
-        <span className="text-[10px] sm:text-xs text-center">{name}</span>
-      </div>
-    );
-  }
+const MarqueeItem = ({ item }) => {
+  const { Icon, name, color } = item;
 
-  if (type === "text") {
-    return (
-      <div
-        className="w-24 h-10 sm:w-60 sm:h-24 bg-[#1f1f1f] text-white
-                   p-2 sm:p-3 mx-1 sm:mx-2 rounded-md shadow-lg
-                   flex items-center justify-center
-                   text-[8px] sm:text-[10px] text-center"
+  return (
+    <div
+      className="
+        group flex items-center gap-3
+        px-5 py-3 mx-2
+        rounded-full
+        border border-gray-200 dark:border-white/10
+        bg-gray-100/70 dark:bg-white/[0.04]
+        backdrop-blur-sm
+        transition-all duration-300
+        hover:bg-gray-200 dark:hover:bg-white/[0.08]
+        hover:border-gray-300 dark:hover:border-white/20
+      "
+    >
+      <Icon
+        className={`
+          text-xl sm:text-2xl
+          ${color}
+          transition-transform duration-300
+          group-hover:scale-110
+        `}
+      />
+
+      <span
+        className="
+          whitespace-nowrap
+          text-sm sm:text-base
+          font-medium
+          text-gray-700 dark:text-gray-200
+        "
       >
-        {item}
-      </div>
-    );
-  }
-  return null;
+        {name}
+      </span>
+    </div>
+  );
 };
 
 const MarqueeBoxes = () => {
-  const renderMarqueeRow = (items, type, direction) => (
-    <div className="py-3">
-      <Marquee direction={direction} pauseOnHover speed={30} gradient={false}>
+  const renderMarqueeRow = (items, direction) => (
+    <div className="py-2">
+      <Marquee
+        direction={direction}
+        pauseOnHover
+        speed={35}
+        gradient={false}
+        autoFill
+      >
         {items.map((item, index) => (
-          <MarqueeItem key={index} item={item} type={type} />
+          <MarqueeItem
+            key={`${item.name}-${index}`}
+            item={item}
+          />
         ))}
       </Marquee>
     </div>
   );
 
   return (
-    <div className="w-full overflow-hidden px-9 relative">
-      {renderMarqueeRow(techIcons1, "icon", "right")}
-      {renderMarqueeRow(techIcons2, "icon", "left")}
-    </div>
+    <section className="w-full overflow-hidden py-6">
+      {renderMarqueeRow(techIcons1, "right")}
+      {renderMarqueeRow(techIcons2, "left")}
+    </section>
   );
 };
 

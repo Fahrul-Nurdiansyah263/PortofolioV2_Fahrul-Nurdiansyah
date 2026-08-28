@@ -1,0 +1,418 @@
+import {
+  FaReact,
+  FaLaravel,
+  FaPython,
+  FaPhp,
+  FaBootstrap,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs
+} from "react-icons/fa";
+
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGooglefonts,
+  SiMysql,
+  SiTypescript,
+  SiFilament,
+  SiAxios,
+  SiReactquery,
+  SiReactrouter,
+  SiFramer,
+  SiVite,
+  SiSqlite,
+  SiDart,
+  SiFirebase,
+  SiGoogle 
+} from "react-icons/si";
+
+import { RiSupabaseFill, RiGeminiFill } from "react-icons/ri";
+import { AiOutlineOpenAI } from "react-icons/ai";
+import { FaFlutter } from "react-icons/fa6";
+
+// Set ke false kalau mau sembunyiin tombol filter framework di halaman Projects
+export const showFrameworkFilter = true;
+
+const projectsData = [
+  {
+    id: "ruliconnect",
+    title: "projects.items.ruliConnect.title",
+    description: "projects.items.ruliConnect.description",
+    image: "/Projects/ruliconnect.png",
+    problem: "projects.items.ruliConnect.problem",
+    solution: "projects.items.ruliConnect.solution",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/RuliConnect",
+    demoUrl: "https://ruli-connect-865z.vercel.app/",
+    framework: "Next.js",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Google Fonts",
+      "Gemini",
+      "OpenAI",
+    ],
+    technologies: [
+      { Icon: SiNextdotjs, color: "text-black dark:text-white" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+      { Icon: RiSupabaseFill, color: "text-green-500" },
+      { Icon: SiGooglefonts, color: "text-yellow-600" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+      { Icon: AiOutlineOpenAI, color: "text-teal-500" },
+    ],
+  },
+
+  {
+    id: "zanilainbloom",
+    title: "projects.items.zanila.title",
+    description: "projects.items.zanila.description",
+    image: "/Projects/zanila.png",
+    problem: "projects.items.zanila.problem",
+    solution: "projects.items.zanila.solution",
+    demoUrl: "zanila.vercel.app",
+    framework: "Next.js",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Google Fonts",
+      "Gemini",
+      "OpenAI",
+    ],
+    technologies: [
+      { Icon: SiNextdotjs, color: "text-black dark:text-white" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+      { Icon: RiSupabaseFill, color: "text-green-500" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+      { Icon: AiOutlineOpenAI, color: "text-teal-500" },
+    ],
+  },
+
+  {
+    id: "tanya-arul",
+    title: "projects.items.tanyaArul.title",
+    description: "projects.items.tanyaArul.description",
+    problem: "projects.items.tanyaArul.problem",
+    solution: "projects.items.tanyaArul.solution",
+    image: "/Projects/tanyaArul.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/tanyaArulV2",
+    demoUrl: "https://tanya-arul-v2.vercel.app/",
+    framework: "React",
+    tech: ["React", "Tailwind CSS", "Google Fonts", "Gemini", "OpenAI"],
+    technologies: [
+      { Icon: FaReact, color: "text-sky-400" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+      { Icon: SiGooglefonts, color: "text-yellow-600" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+      { Icon: AiOutlineOpenAI, color: "text-teal-500" },
+    ],
+  },
+
+  {
+    id: "ruligame-list",
+    title: "projects.items.ruligamelist.title",
+    description: "projects.items.ruligamelist.description",
+    problem: "projects.items.ruligamelist.problem",
+    solution: "projects.items.ruligamelist.solution",
+    image: "/Projects/RuliGameList.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/RuliGameReact",
+    framework: "React",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "Axios",
+      "React Router",
+      "Framer Motion",
+    ],
+    technologies: [
+      { Icon: FaReact, color: "text-sky-400" },
+      { Icon: SiTypescript, color: "text-blue-500" },
+      { Icon: SiTailwindcss, color: "text-cyan-400" },
+      { Icon: SiReactquery, color: "text-red-500" },
+      { Icon: SiAxios, color: "text-purple-500" },
+      { Icon: SiReactrouter, color: "text-red-400" },
+      { Icon: SiFramer, color: "text-pink-500" },
+    ],
+  },
+
+  {
+    id: "bakso-mas-joni",
+    title: "projects.items.baksoMasJoni.title",
+    description: "projects.items.baksoMasJoni.description",
+    problem: "projects.items.baksoMasJoni.problem",
+    solution: "projects.items.baksoMasJoni.solution",
+    image: "/Projects/baksomasjoni.png",
+    githubUrl:
+      "https://github.com/Fahrul-Nurdiansyah263/Bakso-Mas-Joni-APP---FIX",
+    framework: "Laravel",
+    tech: ["Laravel", "Filament", "MySQL", "Tailwind CSS", "Gemini"],
+    technologies: [
+      { Icon: FaLaravel, color: "text-red-600" },
+      { Icon: SiFilament, color: "text-orange-500" },
+      { Icon: SiMysql, color: "text-blue-600" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+    ],
+  },
+
+  {
+    id: "ruli-learning",
+    title: "projects.items.ruliLearningLaravel.title",
+    description: "projects.items.ruliLearningLaravel.description",
+    problem: "projects.items.ruliLearningLaravel.problem",
+    solution: "projects.items.ruliLearningLaravel.solution",
+    image: "/Projects/RuliLearning_React.png",
+    githubUrl:
+      "https://github.com/Fahrul-Nurdiansyah263/RuliLearning-Laravel_Version",
+    framework: "Laravel",
+    tech: [
+      "Laravel",
+      "Filament",
+      "Tailwind CSS",
+      "MySQL",
+      "Google Fonts",
+      "Gemini",
+      "OpenAI",
+    ],
+    technologies: [
+      { Icon: FaLaravel, color: "text-red-500" },
+      { Icon: SiFilament, color: "text-[#e92c2c]" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+      { Icon: SiMysql, color: "text-sky-700" },
+      { Icon: SiGooglefonts, color: "text-yellow-600" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+      { Icon: AiOutlineOpenAI, color: "text-teal-500" },
+    ],
+  },
+
+  {
+    id: "ruli-klinik",
+    title: "projects.items.ruliKlinik.title",
+    description: "projects.items.ruliKlinik.description",
+    problem: "projects.items.ruliKlinik.problem",
+    solution: "projects.items.ruliKlinik.solution",
+    image: "/Projects/RuliKlinik.png",
+    githubUrl:
+      "https://github.com/Fahrul-Nurdiansyah263/RuliKlink-Laravel/tree/main",
+    framework: "Laravel",
+    tech: [
+      "Laravel",
+      "Bootstrap",
+      "MySQL",
+      "Google Fonts",
+      "Gemini",
+      "OpenAI",
+    ],
+    technologies: [
+      { Icon: FaLaravel, color: "text-red-500" },
+      { Icon: FaBootstrap, color: "text-purple-600" },
+      { Icon: SiMysql, color: "text-sky-700" },
+      { Icon: SiGooglefonts, color: "text-yellow-600" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+      { Icon: AiOutlineOpenAI, color: "text-teal-500" },
+    ],
+  },
+
+  {
+    id: "vetrack",
+    title: "projects.items.vetrack.title",
+    description: "projects.items.vetrack.description",
+    problem: "projects.items.vetrack.problem",
+    solution: "projects.items.vetrack.solution",
+    image: "/Projects/vetrack.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/VeTrack",
+    framework: "Laravel",
+    tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Vite"],
+    technologies: [
+      { Icon: FaLaravel, color: "text-red-500" },
+      { Icon: FaPhp, color: "text-indigo-500" },
+      { Icon: SiMysql, color: "text-blue-500" },
+      { Icon: SiTailwindcss, color: "text-cyan-400" },
+      { Icon: SiVite, color: "text-purple-500" },
+    ],
+  },
+
+  {
+    id: "myCalculator",
+    title: "projects.items.myCalculator.title",
+    description: "projects.items.myCalculator.description",
+    problem: "projects.items.myCalculator.problem",
+    solution: "projects.items.myCalculator.solution",
+    image: "/Projects/MyCalculator.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/MyCalculator_py",
+    framework: "Python",
+    tech: ["Python"],
+    technologies: [{ Icon: FaPython, color: "text-blue-700" }],
+  },
+
+  {
+    id: "jihanLaundry",
+    title: "projects.items.jihanLaundry.title",
+    description: "projects.items.jihanLaundry.description",
+    problem: "projects.items.jihanLaundry.problem",
+    solution: "projects.items.jihanLaundry.solution",
+    image: "/Projects/jihanLaundry.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/jihanLaundry",
+    demoUrl: "jihan-laundry.vercel.app",
+    framework: "Next.js",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+    ],
+    technologies: [
+      { Icon: SiNextdotjs, color: "text-black dark:text-white" },
+      { Icon: SiTailwindcss, color: "text-cyan-500" },
+    ],
+  },
+
+  {
+    id: "locationHistoryTracker",
+    title: "projects.items.locationHistoryTracker.title",
+    description: "projects.items.locationHistoryTracker.description",
+    problem: "projects.items.locationHistoryTracker.problem",
+    solution: "projects.items.locationHistoryTracker.solution",
+    image: "/Projects/flutterLocation.jpeg",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/Technical-Test-Ventour/tree/main/fahrul_location_tracker",
+    framework: "Flutter",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Sqlite",
+    ],
+    technologies: [
+      { Icon: FaFlutter, color: "text-sky-400" },
+      { Icon: SiDart, color: "text-blue-500" },
+      { Icon: SiSqlite, color: "text-blue-400" },
+    ],
+  },
+
+  {
+    id: "library",
+    title: "projects.items.library.title",
+    description: "projects.items.library.description",
+    problem: "projects.items.library.problem",
+    solution: "projects.items.library.solution",
+    image: "/Projects/web-perpustakaan.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/web-perpustakaan",
+    framework: "PHP",
+    tech: [
+      "HTML",
+      "CSS",
+      "PHP",
+    ],
+    technologies: [
+      { Icon: FaHtml5, color: "text-orange-500" },
+      { Icon: FaCss3Alt, color: "text-blue-500" },
+      { Icon: FaPhp, color: "text-indigo-500" },
+    ],
+  },
+
+  {
+    id: "geminiAiChatFlutter",
+    title: "projects.items.geminiAiChatFlutter.title",
+    description: "projects.items.geminiAiChatFlutter.description",
+    problem: "projects.items.geminiAiChatFlutter.problem",
+    solution: "projects.items.geminiAiChatFlutter.solution",
+    image: "/Projects/geminiChatFlutter.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/AI-Flutter-Google-Generative-AI-0.4.6-",
+    framework: "Flutter",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Gemini",
+    ],
+    technologies: [
+      { Icon: FaFlutter, color: "text-sky-400" },
+      { Icon: SiDart, color: "text-blue-500" },
+      { Icon: RiGeminiFill, color: "text-blue-500" },
+    ],
+  },
+
+  {
+    id: "catatan",
+    title: "projects.items.catatan.title",
+    description: "projects.items.catatan.description",
+    problem: "projects.items.catatan.problem",
+    solution: "projects.items.catatan.solution",
+    image: "/Projects/catatan.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/catatan_flutter-firebase",
+    framework: "Flutter",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Google Generative AI",
+    ],
+    technologies: [
+      { Icon: FaFlutter, color: "text-sky-400" },
+      { Icon: SiDart, color: "text-blue-500" },
+      { Icon: SiFirebase, color: "text-yellow-500" },
+      { Icon: SiGoogle, color: "text-blue-500" },
+    ],
+  },
+
+  {
+    id: "ruliSiPenerjemah",
+    title: "projects.items.ruliSiPenerjemah.title",
+    description: "projects.items.ruliSiPenerjemah.description",
+    problem: "projects.items.ruliSiPenerjemah.problem",
+    solution: "projects.items.ruliSiPenerjemah.solution",
+    image: "/Projects/translate.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/web-translate",
+    framework: "Javascript",
+    demoUrl: "https://fahrul26.github.io/rulisipenerjemah/",
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    technologies: [
+      { Icon: FaHtml5, color: "text-orange-500" },
+      { Icon: FaCss3Alt, color: "text-blue-500" },
+      { Icon: FaJs, color: "text-yellow-400" },
+    ],
+  },
+
+   {
+    id: "fahrulMovies21",
+    title: "projects.items.fahrulMovies.title",
+    description: "projects.items.fahrulMovies.description",
+    problem: "projects.items.fahrulMovies.problem",
+    solution: "projects.items.fahrulMovies.solution",
+    image: "/Projects/fahrulMovies.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/FahrulMovies21",
+    demoUrl: "fahrul-movies21.vercel.app",
+    framework: "React",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "Axios",
+      "React Router",
+      "Framer Motion",
+    ],
+    technologies: [
+      { Icon: FaReact, color: "text-sky-400" },
+      { Icon: FaBootstrap, color: "text-purple-600" },
+    ],
+  },
+
+  {
+    id: "voice-assistant",
+    title: "projects.items.voiceAssistant.title",
+    description: "projects.items.voiceAssistant.description",
+    problem: "projects.items.voiceAssistant.problem",
+    solution: "projects.items.voiceAssistant.solution",
+    image: "/Projects/ruli-virtual.png",
+    githubUrl: "https://github.com/Fahrul-Nurdiansyah263/ruli-ai",
+    framework: "Python",
+    tech: ["Python"],
+    technologies: [{ Icon: FaPython, color: "text-blue-700" }],
+  },
+];
+
+export default projectsData;
