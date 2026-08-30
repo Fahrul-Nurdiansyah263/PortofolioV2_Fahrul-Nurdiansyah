@@ -1,10 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "motion/react";
+import { useRef } from "react";
 import ThreeDCard from "../components/common/ThreeDCard";
 import ProjectModal from "../components/common/ProjectModal";
 import projectsData from "../data/projects";
 import { useLanguage } from "../context/LanguageContext";
+
+// Card wrapper yang animasinya trigger saat masuk viewport,
+// bukan saat component pertama kali mount — aman untuk lazy-loaded section.
+function AnimatedCard({ children, index }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.15 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{
+        duration: 0.4,
+        delay: Math.min(index * 0.06, 0.3), // cap delay supaya card di bawah tidak terlalu lama
+        ease: "easeOut",
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 
 export default function Projects({ limit, showFilter = true }) {
   const { translation } = useLanguage();
@@ -95,18 +119,7 @@ export default function Projects({ limit, showFilter = true }) {
       >
         <AnimatePresence mode="popLayout">
           {visibleProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.05,
-                ease: "easeOut",
-              }}
-            >
+            <AnimatedCard key={project.id} index={index}>
               <ThreeDCard
                 title={translation(project.title)}
                 description={translation(project.description)}
@@ -129,7 +142,7 @@ export default function Projects({ limit, showFilter = true }) {
                   </>
                 }
               />
-            </motion.div>
+            </AnimatedCard>
           ))}
         </AnimatePresence>
       </div>

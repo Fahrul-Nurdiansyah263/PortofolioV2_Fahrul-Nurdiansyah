@@ -5,6 +5,14 @@
     "projects": "Projects",
     "hireme": "Hire Me"
   },
+  "hero": {
+    "title": "Building Modern, Scalable & Intelligent Applications.",
+    "subtitle": "I build with curiosity, solve with purpose, and create with intention.",
+    "button" : {
+      "primary" : "Explore My Work",
+      "secondary" : "Let's Connect"
+    }
+  },
   "about": {
     "title": "Get to Know Me",
     "subtitle": "More than just a developer - here's a little about the person behind the code.",
@@ -141,10 +149,10 @@
       "period": "Oct 13, 2025 - Feb 13, 2026"
     },
     "experience": {
-      "convertedFigma": "✅ Converted Figma designs into responsive web pages.",
-      "implementedTheme": "✅ Implemented theme layouts for MiWeb platform.",
-      "improvedUI": "✅ Improved UI styling and responsive layout across devices.",
-      "fixedFrontend": "✅ Fixed front-end functionality and layout issues."
+      "convertedFigma": "Converted Figma designs into responsive web pages.",
+      "implementedTheme": "Implemented theme layouts for MiWeb platform.",
+      "improvedUI": "Improved UI styling and responsive layout across devices.",
+      "fixedFrontend": "Fixed front-end functionality and layout issues."
     }
   },
   "achievements": {

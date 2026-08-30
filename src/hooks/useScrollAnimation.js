@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
 /**
  * Hook untuk scroll-triggered animation pengganti AOS.

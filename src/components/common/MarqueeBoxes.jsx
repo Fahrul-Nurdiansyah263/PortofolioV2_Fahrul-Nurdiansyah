@@ -126,10 +126,9 @@ const MarqueeItem = ({ item }) => {
         px-5 py-3 mx-2
         rounded-full
         border border-gray-200 dark:border-white/10
-        bg-gray-100/70 dark:bg-white/[0.04]
-        backdrop-blur-sm
+        bg-gray-100 dark:bg-white/[0.06]
         transition-all duration-300
-        hover:bg-gray-200 dark:hover:bg-white/[0.08]
+        hover:bg-gray-200 dark:hover:bg-white/[0.10]
         hover:border-gray-300 dark:hover:border-white/20
       "
     >

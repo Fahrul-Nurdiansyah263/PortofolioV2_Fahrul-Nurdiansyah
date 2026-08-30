@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Lanyard from "../components/Lanyard";
 import DecryptedText from "../components/DecryptedText";
 import MarqueeBoxes from "../components/common/MarqueeBoxes";
@@ -49,36 +49,14 @@ export default function About() {
           </div>
           <div className="flex-col hidden lg:flex xl:w-xl mt-10 gap-5 xl:pl-10 lg:pl-0 pl-20 max-w-xl">
             <FadeUp delay={0.2} className="text-left">
-              <DecryptedText
-                text={translation("about.description1")}
-                speed={100}
-                maxIterations={15}
-                className="revealed text-[14px] md:text-base"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
-              />
+              <p className="revealed text-[14px] md:text-base">{translation("about.description1")}</p>
             </FadeUp>
-
             <div className="flex flex-col gap-5">
               <FadeUp delay={0.3} className="text-justify sm:text-left">
-                <DecryptedText
-                  text={translation("about.description2")}
-                  speed={100}
-                  maxIterations={15}
-                  className="revealed text-sm md:text-base"
-                  parentClassName="all-letters"
-                  encryptedClassName="encrypted"
-                />
+                <p className="revealed text-sm md:text-base">{translation("about.description2")}</p>
               </FadeUp>
               <FadeUp delay={0.4} className="text-justify sm:text-left">
-                <DecryptedText
-                  text={translation("about.description3")}
-                  speed={100}
-                  maxIterations={15}
-                  className="revealed text-sm md:text-base"
-                  parentClassName="all-letters"
-                  encryptedClassName="encrypted"
-                />
+                <p className="revealed text-sm md:text-base">{translation("about.description3")}</p>
               </FadeUp>
             </div>
           </div>
@@ -87,9 +65,9 @@ export default function About() {
         {/* Lanyard canvas */}
         <motion.div
           className="canvas-wrapper relative overflow-auto w-full md:col-start-2 md:row-start-1 md:row-span-2 flex xl:w-[500px] lg:w-[600px] items-center justify-center"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <Lanyard position={[0, 0, 15]} gravity={[0, -80, 0]} />
         </motion.div>
@@ -97,36 +75,15 @@ export default function About() {
         {/* Descriptions — mobile */}
         <div className="flex flex-col lg:hidden max-w-7xl gap-5 px-4 md:px-8 -mt-4">
           <FadeUp delay={0.1} className="mx-auto sm:text-left">
-            <DecryptedText
-              text={translation("about.description1")}
-              speed={100}
-              maxIterations={15}
-              className="revealed text-sm"
-              parentClassName="all-letters"
-              encryptedClassName="encrypted"
-            />
+            <p className="revealed text-sm">{translation("about.description1")}</p>
           </FadeUp>
 
           <div className="flex flex-col gap-5">
             <FadeUp delay={0.2} className="sm:text-left">
-              <DecryptedText
-                text={translation("about.description2")}
-                speed={100}
-                maxIterations={15}
-                className="revealed text-sm"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
-              />
+              <p className="revealed text-sm">{translation("about.description2")}</p>
             </FadeUp>
             <FadeUp delay={0.3} className="sm:text-left">
-              <DecryptedText
-                text={translation("about.description3")}
-                speed={100}
-                maxIterations={15}
-                className="revealed text-sm"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
-              />
+              <p className="revealed text-sm">{translation("about.description3")}</p>
             </FadeUp>
           </div>
         </div>

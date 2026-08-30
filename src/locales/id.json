@@ -5,6 +5,14 @@
     "projects": "Proyek",
     "hireme": "Rekrut Saya"
   },
+  "hero" : {
+    "title" : "Membangun Aplikasi Modern, Skalabel & Cerdas.",
+    "subtitle" : "Berkarya dengan rasa ingin tahu, memecahkan masalah dengan tujuan, dan menciptakan dengan penuh makna.",
+    "button" : {
+      "primary" : "Lihat Karya Saya",
+      "secondary" : "Mari Terhubung"
+    }
+  },
   "about": {
     "title": "Kenali Saya",
     "subtitle": "Bukan sekadar seorang developer — kenali sedikit tentang sosok di balik setiap baris kode.",

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export function DirectionAwareHover({ imageUrl, children, className }) {
   const [hovered, setHovered] = useState(false);
