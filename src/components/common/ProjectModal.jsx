@@ -115,7 +115,7 @@ const ProjectModal = ({ project, isOpen, onClose, translation }) => {
         </div>
 
         {/* Footer Actions */}
-        <div className="p-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap gap-3 flex-shrink-0">
+        <div className="p-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row gap-3 flex-shrink-0">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
@@ -131,7 +131,7 @@ const ProjectModal = ({ project, isOpen, onClose, translation }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-neutral-300 dark:border-neutral-700 py-3 rounded-xl font-medium hover:bg-neutral-50 dark:hover:bg-white/5 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 border border-neutral-300 dark:border-neutral-700 dark:text-white py-3 rounded-xl font-medium hover:bg-neutral-50 dark:hover:bg-white/5 transition-colors"
             >
               <ExternalLink size={18} /> Live Demo
             </a>
